@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		9A33A687243228F2001BD8E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A686243228F2001BD8E3 /* AppDelegate.swift */; };
 		9A33A689243228F2001BD8E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A688243228F2001BD8E3 /* SceneDelegate.swift */; };
-		9A33A68B243228F2001BD8E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A68A243228F2001BD8E3 /* ViewController.swift */; };
+		9A33A68B243228F2001BD8E3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A68A243228F2001BD8E3 /* SearchViewModel.swift */; };
 		9A33A68E243228F2001BD8E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A33A68C243228F2001BD8E3 /* Main.storyboard */; };
 		9A33A690243228F8001BD8E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A33A68F243228F8001BD8E3 /* Assets.xcassets */; };
 		9A33A693243228F8001BD8E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A33A691243228F8001BD8E3 /* LaunchScreen.storyboard */; };
 		9A33A69E243228F8001BD8E3 /* Corona_Covid_19Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A69D243228F8001BD8E3 /* Corona_Covid_19Tests.swift */; };
 		9A33A6A9243228F8001BD8E3 /* Corona_Covid_19UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A6A8243228F8001BD8E3 /* Corona_Covid_19UITests.swift */; };
+		9A33A6B7243232B5001BD8E3 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A6B6243232B4001BD8E3 /* APIManager.swift */; };
+		9A33A6B9243232CC001BD8E3 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A6B8243232CC001BD8E3 /* Parser.swift */; };
+		9A33A6BB243237CA001BD8E3 /* CovidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A6BA243237CA001BD8E3 /* CovidModel.swift */; };
+		9A33A6C424326135001BD8E3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A6C324326135001BD8E3 /* SearchViewController.swift */; };
+		9A33A6C624326802001BD8E3 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A6C524326802001BD8E3 /* SearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,7 @@
 		9A33A683243228F2001BD8E3 /* Corona Covid-19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona Covid-19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A33A686243228F2001BD8E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A33A688243228F2001BD8E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9A33A68A243228F2001BD8E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A33A68A243228F2001BD8E3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		9A33A68D243228F2001BD8E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A33A68F243228F8001BD8E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A33A692243228F8001BD8E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		9A33A6A4243228F8001BD8E3 /* Corona Covid-19UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Corona Covid-19UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A33A6A8243228F8001BD8E3 /* Corona_Covid_19UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Corona_Covid_19UITests.swift; sourceTree = "<group>"; };
 		9A33A6AA243228F8001BD8E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A33A6B6243232B4001BD8E3 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9A33A6B8243232CC001BD8E3 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		9A33A6BA243237CA001BD8E3 /* CovidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModel.swift; sourceTree = "<group>"; };
+		9A33A6C324326135001BD8E3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9A33A6C524326802001BD8E3 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +109,9 @@
 		9A33A685243228F2001BD8E3 /* Corona Covid-19 */ = {
 			isa = PBXGroup;
 			children = (
-				9A33A686243228F2001BD8E3 /* AppDelegate.swift */,
-				9A33A688243228F2001BD8E3 /* SceneDelegate.swift */,
-				9A33A68A243228F2001BD8E3 /* ViewController.swift */,
-				9A33A68C243228F2001BD8E3 /* Main.storyboard */,
-				9A33A68F243228F8001BD8E3 /* Assets.xcassets */,
-				9A33A691243228F8001BD8E3 /* LaunchScreen.storyboard */,
+				9A33A6C2243257DB001BD8E3 /* Networking */,
+				9A33A6BD2432576A001BD8E3 /* Supporting Files */,
+				9A33A6BC24325762001BD8E3 /* Search */,
 				9A33A694243228F8001BD8E3 /* Info.plist */,
 			);
 			path = "Corona Covid-19";
@@ -126,6 +133,62 @@
 				9A33A6AA243228F8001BD8E3 /* Info.plist */,
 			);
 			path = "Corona Covid-19UITests";
+			sourceTree = "<group>";
+		};
+		9A33A6BC24325762001BD8E3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9A33A6BE24325776001BD8E3 /* Models */,
+				9A33A6C124325799001BD8E3 /* ViewControllers */,
+				9A33A6C024325786001BD8E3 /* ViewModels */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9A33A6BD2432576A001BD8E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A33A686243228F2001BD8E3 /* AppDelegate.swift */,
+				9A33A688243228F2001BD8E3 /* SceneDelegate.swift */,
+				9A33A68F243228F8001BD8E3 /* Assets.xcassets */,
+				9A33A691243228F8001BD8E3 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A33A6BE24325776001BD8E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A33A6BA243237CA001BD8E3 /* CovidModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9A33A6C024325786001BD8E3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9A33A68A243228F2001BD8E3 /* SearchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9A33A6C124325799001BD8E3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9A33A68C243228F2001BD8E3 /* Main.storyboard */,
+				9A33A6C324326135001BD8E3 /* SearchViewController.swift */,
+				9A33A6C524326802001BD8E3 /* SearchTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9A33A6C2243257DB001BD8E3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9A33A6B6243232B4001BD8E3 /* APIManager.swift */,
+				9A33A6B8243232CC001BD8E3 /* Parser.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A33A68B243228F2001BD8E3 /* ViewController.swift in Sources */,
+				9A33A6B7243232B5001BD8E3 /* APIManager.swift in Sources */,
+				9A33A6C424326135001BD8E3 /* SearchViewController.swift in Sources */,
+				9A33A6BB243237CA001BD8E3 /* CovidModel.swift in Sources */,
+				9A33A68B243228F2001BD8E3 /* SearchViewModel.swift in Sources */,
+				9A33A6B9243232CC001BD8E3 /* Parser.swift in Sources */,
+				9A33A6C624326802001BD8E3 /* SearchTableViewCell.swift in Sources */,
 				9A33A687243228F2001BD8E3 /* AppDelegate.swift in Sources */,
 				9A33A689243228F2001BD8E3 /* SceneDelegate.swift in Sources */,
 			);
