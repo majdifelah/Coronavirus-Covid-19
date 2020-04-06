@@ -12,11 +12,15 @@ enum Outcome {
     case success(Data)
     case failure(String)
 }
+enum HttpMethod: String {
+    case get = "GET"
+    case post = "POST"
+}
 
 final class APIManager {
     
     private let session: URLSession
-    
+    //Dependency Injection
     init(session: URLSession = URLSession(configuration: .default)) {
         self.session = session
     }

@@ -9,36 +9,50 @@
 
 import Foundation
 
-class SearchViewModel {
-    
-    let apiManager = APIManager()
-    var covidByCountry: [CovidStats] = []
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//        let country = "united kingdom"
-//        searchForCovidInCountry(country.capitalized)
-//        
-//    }
-    
-    func searchForCovidInCountry(_ country: String) {
-        
-        apiManager.searchFor(country) { [unowned self] outcome in
-            
-            switch outcome {
-            case .failure(let errorString):
-                print(errorString)
-            case .success(let data):
-                do {
-                    let result = try JSONParser.parse(data, type: CodivLastResultRoot.self)
-                    self.covidByCountry = result.data.covid19Stats
-                    print("the result : \(self.covidByCountry)")
-                } catch {
-                    print("JSON Error: \(error)")
-                }
-            }
-        }
-    }
-
+struct SearchListViewModel {
+    let countryCovidStats: [CovidStats]
 }
+
+extension SearchListViewModel {
+    
+    var numberOfSections: Int {
+        return 1
+    }
+    
+    func numberOfRowsInSection(_ section: Int) -> Int {
+        return self.countryCovidStats.count
+    }
+    
+    func searchStatAtIndex(_ index: Int) -> SearchViewModel {
+        let coutryCovidStat = self.countryCovidStats[index]
+        return SearchViewModel(coutryCovidStat)
+    }
+    
+}
+
+
+struct SearchViewModel {
+    private let countryCovidStat: CovidStats
+}
+
+extension SearchViewModel {
+    init(_ countryCovidStat: CovidStats) {
+        self.countryCovidStat = countryCovidStat
+    }
+}
+
+extension SearchViewModel {
+    
+    var deathsCases: String {
+        return "\(self.countryCovidStat.deaths)"
+    }
+    
+    var recoveredCases: String {
+        return "\(self.countryCovidStat.recovered)"
+    }
+    
+    var confirmedCases: String {
+        return "\(self.countryCovidStat.confirmed)"
+    }
+}
+

@@ -15,16 +15,10 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var deathsLabel: UILabel!
     @IBOutlet weak var recoveredCasesLabel: UILabel!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configureCell(countryCovidStat: SearchViewModel) {
+        //countryImage.image = UIImage(
+        confirmedCasesLabel.text = "Confirmed: \(countryCovidStat.confirmedCases)"
+        deathsLabel.text = "Deaths: \(countryCovidStat.deathsCases)"
+        recoveredCasesLabel.text = "Recovered: \(countryCovidStat.recoveredCases)"
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

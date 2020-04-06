@@ -20,6 +20,7 @@
 		9A33A6BB243237CA001BD8E3 /* CovidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A6BA243237CA001BD8E3 /* CovidModel.swift */; };
 		9A33A6C424326135001BD8E3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A6C324326135001BD8E3 /* SearchViewController.swift */; };
 		9A33A6C624326802001BD8E3 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33A6C524326802001BD8E3 /* SearchTableViewCell.swift */; };
+		9A40B7B9243BE7CF0067F0AB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7B8243BE7CF0067F0AB /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		9A33A6BA243237CA001BD8E3 /* CovidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModel.swift; sourceTree = "<group>"; };
 		9A33A6C324326135001BD8E3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9A33A6C524326802001BD8E3 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		9A40B7B8243BE7CF0067F0AB /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +111,8 @@
 		9A33A685243228F2001BD8E3 /* Corona Covid-19 */ = {
 			isa = PBXGroup;
 			children = (
-				9A33A6C2243257DB001BD8E3 /* Networking */,
 				9A33A6BD2432576A001BD8E3 /* Supporting Files */,
+				9A33A6C2243257DB001BD8E3 /* Web Services */,
 				9A33A6BC24325762001BD8E3 /* Search */,
 				9A33A694243228F8001BD8E3 /* Info.plist */,
 			);
@@ -138,6 +140,7 @@
 		9A33A6BC24325762001BD8E3 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				9A40B7B7243BE0C10067F0AB /* Cells */,
 				9A33A6BE24325776001BD8E3 /* Models */,
 				9A33A6C124325799001BD8E3 /* ViewControllers */,
 				9A33A6C024325786001BD8E3 /* ViewModels */,
@@ -177,18 +180,26 @@
 			children = (
 				9A33A68C243228F2001BD8E3 /* Main.storyboard */,
 				9A33A6C324326135001BD8E3 /* SearchViewController.swift */,
-				9A33A6C524326802001BD8E3 /* SearchTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		9A33A6C2243257DB001BD8E3 /* Networking */ = {
+		9A33A6C2243257DB001BD8E3 /* Web Services */ = {
 			isa = PBXGroup;
 			children = (
 				9A33A6B6243232B4001BD8E3 /* APIManager.swift */,
+				9A40B7B8243BE7CF0067F0AB /* WebService.swift */,
 				9A33A6B8243232CC001BD8E3 /* Parser.swift */,
 			);
-			path = Networking;
+			path = "Web Services";
+			sourceTree = "<group>";
+		};
+		9A40B7B7243BE0C10067F0AB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9A33A6C524326802001BD8E3 /* SearchTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A40B7B9243BE7CF0067F0AB /* WebService.swift in Sources */,
 				9A33A6B7243232B5001BD8E3 /* APIManager.swift in Sources */,
 				9A33A6C424326135001BD8E3 /* SearchViewController.swift in Sources */,
 				9A33A6BB243237CA001BD8E3 /* CovidModel.swift in Sources */,
