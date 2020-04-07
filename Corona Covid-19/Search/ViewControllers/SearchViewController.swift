@@ -66,7 +66,6 @@ class SearchViewController: UIViewController {
                 do {
                     let result = try decoder.decode(WorldStats.self, from: data)
                     self.worldStats = result
-                    print(self.worldStats)
                 } catch {
 
                     fatalError("fatal error while getting world Stats")

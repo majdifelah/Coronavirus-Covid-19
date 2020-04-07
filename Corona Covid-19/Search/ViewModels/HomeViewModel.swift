@@ -29,7 +29,7 @@ extension HomeViewModel {
     }
     
     var totalDeaths: String {
-        return "\(self.worldStats.totalRecovered)"
+        return "\(self.worldStats.totalDeaths)"
     }
     
     var newCases: String {

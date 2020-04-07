@@ -205,10 +205,12 @@
                         <constraints>
                             <constraint firstItem="1qG-mq-qrV" firstAttribute="top" secondItem="RDt-FY-H1g" secondAttribute="bottom" constant="6" id="1Hv-g3-6OJ"/>
                             <constraint firstItem="eMi-I1-xLu" firstAttribute="top" secondItem="3P4-Nw-a2B" secondAttribute="bottom" constant="7.5" id="5kL-1N-iVx"/>
+                            <constraint firstItem="NAj-FN-hbW" firstAttribute="leading" secondItem="td4-eg-2bM" secondAttribute="leading" id="73z-7A-T2D"/>
                             <constraint firstItem="D1t-fw-c59" firstAttribute="trailing" secondItem="6T4-GO-bf7" secondAttribute="trailing" constant="20" id="8OG-1I-AwX"/>
                             <constraint firstItem="NAj-FN-hbW" firstAttribute="leading" secondItem="D1t-fw-c59" secondAttribute="leading" constant="20" id="8Wf-c3-1Gd"/>
                             <constraint firstItem="BxB-pA-CTX" firstAttribute="leading" secondItem="6T4-GO-bf7" secondAttribute="leading" id="8b5-Si-CGU"/>
                             <constraint firstItem="x2s-Kv-aza" firstAttribute="top" secondItem="BxB-pA-CTX" secondAttribute="bottom" constant="6" id="AuL-Nr-ABi"/>
+                            <constraint firstItem="6T4-GO-bf7" firstAttribute="leading" secondItem="td4-eg-2bM" secondAttribute="leading" id="Fro-zE-avc"/>
                             <constraint firstItem="td4-eg-2bM" firstAttribute="top" secondItem="eMi-I1-xLu" secondAttribute="bottom" constant="80" id="HQU-97-0JK"/>
                             <constraint firstItem="eMi-I1-xLu" firstAttribute="centerX" secondItem="KtT-1F-z9M" secondAttribute="centerX" id="K1m-VN-lSM"/>
                             <constraint firstItem="9jw-0C-kdS" firstAttribute="centerX" secondItem="KtT-1F-z9M" secondAttribute="centerX" id="LOP-Lj-2rJ"/>
@@ -220,6 +222,7 @@
                             <constraint firstItem="D1t-fw-c59" firstAttribute="trailing" secondItem="td4-eg-2bM" secondAttribute="trailing" constant="20" id="aLn-6q-gf2"/>
                             <constraint firstItem="x2s-Kv-aza" firstAttribute="width" secondItem="1qG-mq-qrV" secondAttribute="width" multiplier="0.784431" constant="68" id="diC-pO-g2E"/>
                             <constraint firstItem="1qG-mq-qrV" firstAttribute="leading" secondItem="x2s-Kv-aza" secondAttribute="trailing" constant="8" id="ebo-iq-UTd"/>
+                            <constraint firstItem="NAj-FN-hbW" firstAttribute="trailing" secondItem="td4-eg-2bM" secondAttribute="trailing" id="f20-km-1S3"/>
                             <constraint firstItem="x2s-Kv-aza" firstAttribute="leading" secondItem="6T4-GO-bf7" secondAttribute="leading" id="gAe-5A-Ktf"/>
                             <constraint firstItem="BxB-pA-CTX" firstAttribute="width" secondItem="RDt-FY-H1g" secondAttribute="width" multiplier="1.19162" id="gke-mq-G5E"/>
                             <constraint firstItem="RDt-FY-H1g" firstAttribute="trailing" secondItem="6T4-GO-bf7" secondAttribute="trailing" id="i3t-Ou-zcA"/>
@@ -227,6 +230,7 @@
                             <constraint firstItem="D1t-fw-c59" firstAttribute="trailing" secondItem="NAj-FN-hbW" secondAttribute="trailing" constant="20" id="iNA-N6-1fr"/>
                             <constraint firstItem="RDt-FY-H1g" firstAttribute="leading" secondItem="BxB-pA-CTX" secondAttribute="trailing" constant="8" id="ibO-RQ-UkL"/>
                             <constraint firstItem="3P4-Nw-a2B" firstAttribute="top" secondItem="D1t-fw-c59" secondAttribute="top" constant="15" id="kEw-eI-YrT"/>
+                            <constraint firstItem="6T4-GO-bf7" firstAttribute="trailing" secondItem="td4-eg-2bM" secondAttribute="trailing" id="koW-To-IS6"/>
                             <constraint firstItem="3P4-Nw-a2B" firstAttribute="centerX" secondItem="KtT-1F-z9M" secondAttribute="centerX" id="q53-Ds-wj2"/>
                             <constraint firstItem="D1t-fw-c59" firstAttribute="bottom" secondItem="9jw-0C-kdS" secondAttribute="bottom" constant="49" id="qwb-d4-tAc"/>
                             <constraint firstItem="6T4-GO-bf7" firstAttribute="leading" secondItem="D1t-fw-c59" secondAttribute="leading" constant="20" id="rZN-jY-PjD"/>
