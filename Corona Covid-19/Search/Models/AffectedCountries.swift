@@ -18,6 +18,3 @@ struct AffectedCountries: Codable {
      
     }
 }
-struct Country: Codable {
-   // var _: String
-}

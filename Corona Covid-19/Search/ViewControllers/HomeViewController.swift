@@ -17,18 +17,22 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var totalRecoveredLabel: UILabel!
     @IBOutlet weak var newCasesLabel: UILabel!
     @IBOutlet weak var newDeathsCases: UILabel!
+    @IBOutlet weak var checkByCountryButton: UIButton!
     
     
     private var homeListVM: HomeViewModel!
     
     let provider = MoyaProvider<CoronaVirus>()
-   // var worldStats: WorldStats?
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        checkByCountryButton.layer.cornerRadius = 20.0
+        view.backgroundColor = UIColor(rgb: 0x3C3B3B)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
             self.getWorldStats()
-        
     }
     
     func getWorldStats() {
