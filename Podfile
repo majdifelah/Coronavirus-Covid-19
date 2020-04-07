@@ -9,8 +9,7 @@ target 'Corona Covid-19' do
   pod 'SDWebImage', '~> 5.0'
   pod 'ReachabilitySwift'
   pod 'MBProgressHUD'
-  pod 'SwiftyJSON' 
-
+  pod 'Charts'
 
   target 'Corona Covid-19Tests' do
     inherit! :search_paths

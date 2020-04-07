@@ -9,7 +9,6 @@
 import Foundation
 import Moya
 import Alamofire
-import SwiftyJSON
 
 class NetworkAdapter{
     let provider = MoyaProvider<CoronaVirus>()

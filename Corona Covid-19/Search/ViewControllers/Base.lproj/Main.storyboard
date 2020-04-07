@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QVX-hT-XOY">
-                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="168"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchID" rowHeight="108" id="Usc-pG-JvA" customClass="SearchTableViewCell" customModule="Corona_Covid_19" customModuleProvider="target">
@@ -91,16 +91,36 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="SI3-b0-3wt"/>
                                 </connections>
                             </searchBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-Oz-cwv">
+                                <rect key="frame" x="42" y="93" width="352" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSL-L5-SjU" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="308" width="374" height="374"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="qIY-qH-1HV"/>
+                                    <constraint firstAttribute="height" constant="374" id="yoe-f6-ETW"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fSL-L5-SjU" secondAttribute="bottom" constant="131" id="4GP-kl-mn6"/>
                             <constraint firstItem="q72-ug-cQ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="72g-s7-XBo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bgk-Oz-cwv" secondAttribute="trailing" constant="20" id="9oE-3x-UfX"/>
                             <constraint firstItem="q72-ug-cQ8" firstAttribute="trailing" secondItem="QVX-hT-XOY" secondAttribute="trailing" id="9zi-6C-jvX"/>
                             <constraint firstItem="QVX-hT-XOY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NLi-jF-SXp"/>
-                            <constraint firstItem="QVX-hT-XOY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VdS-Vk-Skl"/>
+                            <constraint firstItem="bgk-Oz-cwv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="RUq-nD-Lof"/>
+                            <constraint firstItem="fSL-L5-SjU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yfa-ab-faA"/>
                             <constraint firstItem="q72-ug-cQ8" firstAttribute="leading" secondItem="QVX-hT-XOY" secondAttribute="leading" id="fvI-tU-eqw"/>
                             <constraint firstItem="QVX-hT-XOY" firstAttribute="top" secondItem="q72-ug-cQ8" secondAttribute="bottom" id="hHa-DS-A1y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fSL-L5-SjU" secondAttribute="trailing" constant="20" id="pWA-G3-exP"/>
+                            <constraint firstItem="bgk-Oz-cwv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="r6A-FH-242"/>
+                            <constraint firstItem="fSL-L5-SjU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u74-xN-qeS"/>
                             <constraint firstItem="QVX-hT-XOY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="v7a-7v-w55"/>
+                            <constraint firstItem="fSL-L5-SjU" firstAttribute="top" secondItem="QVX-hT-XOY" secondAttribute="bottom" constant="8" id="wCb-YR-txd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -112,13 +132,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="countriesTextField" destination="bgk-Oz-cwv" id="Dla-0V-54I"/>
                         <outlet property="countrySearchBar" destination="q72-ug-cQ8" id="X2f-LE-J1E"/>
+                        <outlet property="pieChartView" destination="fSL-L5-SjU" id="Dzd-IL-utD"/>
                         <outlet property="tableView" destination="QVX-hT-XOY" id="iUM-3S-FKd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4112" y="-427"/>
+            <point key="canvasLocation" x="4111.594202898551" y="-427.23214285714283"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tOz-qf-fFb">

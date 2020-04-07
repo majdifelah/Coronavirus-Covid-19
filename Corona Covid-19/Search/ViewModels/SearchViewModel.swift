@@ -10,7 +10,7 @@
 import Foundation
 
 struct SearchListViewModel {
-    let countryCovidStats: [CovidStats]
+    let countryCovidStats: [LatestStatByCountry]
 }
 
 extension SearchListViewModel {
@@ -32,27 +32,39 @@ extension SearchListViewModel {
 
 
 struct SearchViewModel {
-    private let countryCovidStat: CovidStats
+    private let countryCovidStat: LatestStatByCountry
 }
 
 extension SearchViewModel {
-    init(_ countryCovidStat: CovidStats) {
+    init(_ countryCovidStat: LatestStatByCountry) {
         self.countryCovidStat = countryCovidStat
     }
 }
 
 extension SearchViewModel {
     
-    var deathsCases: String {
-        return "\(self.countryCovidStat.deaths)"
+    var totalCases: String {
+        return self.countryCovidStat.totalCases
     }
     
-    var recoveredCases: String {
-        return "\(self.countryCovidStat.recovered)"
+    var totalDeaths: String {
+        return self.countryCovidStat.totalDeaths
     }
     
-    var confirmedCases: String {
-        return "\(self.countryCovidStat.confirmed)"
+    var totalRecovered: String {
+        return self.countryCovidStat.totalRecovered
+    }
+    
+    var newCases: String {
+        return self.countryCovidStat.newCases
+    }
+    
+    var newDeaths: String {
+        return self.countryCovidStat.newDeaths
+    }
+    
+    var statisticTakenAt: String {
+        return self.countryCovidStat.statisticTakenAt ?? "0"
     }
 }
 

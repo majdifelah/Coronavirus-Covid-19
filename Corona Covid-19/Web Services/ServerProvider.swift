@@ -42,7 +42,7 @@ extension CoronaVirus: TargetType {
             return "/history_by_particular_country_by_date.php"
         case .casesByCountry:
             return "/cases_by_country.php"
-
+            
         }
     }
     
@@ -56,7 +56,7 @@ extension CoronaVirus: TargetType {
     var parameters: [String:Any]? {
         switch self {
         case .historyCasesByParticularCountry(let country):
-          return ["country": country]
+            return ["country": country]
         case .historyByCountryandDate(let country, let date):
             return ["country": country, "date": date]
         case .latestStatByCountry(let country):
@@ -73,21 +73,24 @@ extension CoronaVirus: TargetType {
     var task: Task {
         switch self {
         case .getWorldStat, .affectedCoutries, .randomMaskUsageInstructions,.casesByCountry:
-        return .requestPlain
-        
-        default:
-        if let params = self.parameters {
-            var data = [MultipartFormData]()
-            for (key, value) in params {
-                if let str = value as? String {
-                    let v = str.data(using: .utf8)!
-                    data.append(MultipartFormData(provider: .data(v), name: key))
-                }
-            }
-            return .uploadCompositeMultipart(data, urlParameters: [:])
-        } else {
             return .requestPlain
-        }
+            
+        case .historyByCountryandDate,.historyCasesByParticularCountry,.latestStatByCountry:
+            return .requestCompositeData(bodyData: sampleData, urlParameters: parameters!)
+            
+        default:
+            if let params = self.parameters {
+                var data = [MultipartFormData]()
+                for (key, value) in params {
+                    if let str = value as? String {
+                        let v = str.data(using: .utf8)!
+                        data.append(MultipartFormData(provider: .data(v), name: key))
+                    }
+                }
+                return .uploadCompositeMultipart(data, urlParameters: [:])
+            } else {
+                return .requestPlain
+            }
         }
     }
     

@@ -9,9 +9,8 @@
 import Foundation
 
 struct AffectedCountries: Codable {
-    var affectedCountries: [Country]
-    var statisticTakenAt: String
-
+    var affectedCountries: [String]
+    var statisticTakenAt: String?
     
     enum CodingKeys: String, CodingKey {
         case affectedCountries = "affected_countries"
@@ -20,5 +19,5 @@ struct AffectedCountries: Codable {
     }
 }
 struct Country: Codable {
-    var country: String
+   // var _: String
 }

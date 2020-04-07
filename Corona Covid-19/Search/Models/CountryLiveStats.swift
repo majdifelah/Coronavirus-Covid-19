@@ -24,7 +24,7 @@ struct LatestStatByCountry: Codable {
     var totalRecovered: String
     var newCases: String
     var newDeaths: String
-    var statisticTakenAt: String
+    var statisticTakenAt: String?
     
     enum CodingKeys: String, CodingKey {
         case totalCases = "total_cases"

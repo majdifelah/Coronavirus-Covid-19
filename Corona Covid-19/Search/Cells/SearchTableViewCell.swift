@@ -17,8 +17,8 @@ class SearchTableViewCell: UITableViewCell {
     
     func configureCell(countryCovidStat: SearchViewModel) {
         //countryImage.image = UIImage(
-        confirmedCasesLabel.text = "Confirmed: \(countryCovidStat.confirmedCases)"
-        deathsLabel.text = "Deaths: \(countryCovidStat.deathsCases)"
-        recoveredCasesLabel.text = "Recovered: \(countryCovidStat.recoveredCases)"
+        confirmedCasesLabel.text = "Confirmed: \(countryCovidStat.totalCases)"
+        deathsLabel.text = "Deaths: \(countryCovidStat.totalDeaths)"
+        recoveredCasesLabel.text = "Recovered: \(countryCovidStat.totalRecovered)"
     }
 }
