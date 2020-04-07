@@ -9,7 +9,7 @@ target 'Corona Covid-19' do
   pod 'SDWebImage', '~> 5.0'
   pod 'ReachabilitySwift'
   pod 'MBProgressHUD'
-
+  pod 'SwiftyJSON' 
 
 
   target 'Corona Covid-19Tests' do

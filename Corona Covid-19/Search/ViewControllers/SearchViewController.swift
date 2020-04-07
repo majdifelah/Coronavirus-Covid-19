@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Moya
 
 class SearchViewController: UIViewController {
     
@@ -16,9 +17,12 @@ class SearchViewController: UIViewController {
     
     private var searchListVM: SearchListViewModel!
     
+    let provider = MoyaProvider<CoronaVirus>()
+    
     let apiManager = APIManager()
     var covidByCountry: [CovidStats] = []
     var countryToCheck: String?
+    var worldStats: WorldStats?
     
     @IBAction func reloadButtonAction(_ sender: Any) {
         guard let countryToCheck = self.countryToCheck else {return}
@@ -26,29 +30,54 @@ class SearchViewController: UIViewController {
         searchForCovidInCountry(countryToCheck)
     }
     
+    //    func searchForCovidInCountry(_ country: String) {
+    //
+    //        apiManager.searchFor(country) { [unowned self] outcome in
+    //
+    //            switch outcome {
+    //            case .failure(let errorString):
+    //                print(errorString)
+    //            case .success(let data):
+    //                do {
+    //                    let result = try JSONParser.parse(data, type: CodivLastResultRoot.self)
+    //                    self.covidByCountry = result.data.covid19Stats
+    //
+    //                    self.searchListVM = SearchListViewModel(countryCovidStats: self.covidByCountry)
+    //                    DispatchQueue.main.async {
+    //                        self.tableView.reloadData()
+    //                    }
+    //                    print("the result : \(self.covidByCountry)")
+    //                } catch {
+    //                    print("JSON Error: \(error)")
+    //                }
+    //            }
+    //        }
+    //    }
     func searchForCovidInCountry(_ country: String) {
         
-        apiManager.searchFor(country) { [unowned self] outcome in
+        self.provider.request(.getWorldStat) {[weak self] result in
+            //memory management
+            guard let self = self else { return }
             
-            switch outcome {
-            case .failure(let errorString):
-                print(errorString)
-            case .success(let data):
+            switch result {
+            case .success(let response):
+                let decoder = JSONDecoder()
+                let data = response.data
                 do {
-                    let result = try JSONParser.parse(data, type: CodivLastResultRoot.self)
-                    self.covidByCountry = result.data.covid19Stats
-                    
-                    self.searchListVM = SearchListViewModel(countryCovidStats: self.covidByCountry)
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
-                    print("the result : \(self.covidByCountry)")
+                    let result = try decoder.decode(WorldStats.self, from: data)
+                    self.worldStats = result
+                    print(self.worldStats)
                 } catch {
-                    print("JSON Error: \(error)")
+
+                    fatalError("fatal error while getting world Stats")
                 }
+            case .failure(let error):
+                fatalError("\(String(describing: error.errorDescription!))")
             }
         }
+        
     }
+    
     
 }
 extension SearchViewController: UITableViewDataSource {

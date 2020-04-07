@@ -10,28 +10,26 @@ import Foundation
 import Moya
 
 
-enum CoronaVirus{
+enum CoronaVirus {
     case getWorldStat
     case latestStatByCountry(country: String)
     case affectedCoutries
     case randomMaskUsageInstructions
     case historyCasesByParticularCountry(country: String)
     case historyByCountryandDate(country: String, date: String)
-    case casesByCountry(country: String)
+    case casesByCountry
 }
 
-extension CoronaVirus: TargetType, AccessTokenAuthorizable {
+extension CoronaVirus: TargetType {
     /// The target's base `URL`.
     var baseURL: URL {
-        //    if let baseUrl = Configuration.shared.currentBaseURL {
-        //        return URL(string: baseUrl)!
-        //    }
         return URL(string: "https://coronavirus-monitor.p.rapidapi.com")!
     }
     var path: String {
-        switch self{
+        
+        switch self {
         case .getWorldStat:
-            return ""
+            return "/coronavirus/worldstat.php"
         case .latestStatByCountry:
             return ""
         case .affectedCoutries:
@@ -51,7 +49,20 @@ extension CoronaVirus: TargetType, AccessTokenAuthorizable {
     var method: Moya.Method {
         switch self {
         case .getWorldStat, .latestStatByCountry, .affectedCoutries, .randomMaskUsageInstructions, .historyCasesByParticularCountry, .historyByCountryandDate, .casesByCountry:
-            return .post
+            return .get
+        }
+    }
+    
+    var parameters: [String:Any]? {
+        switch self {
+        case .historyCasesByParticularCountry(let country):
+          return ["country": country]
+        case .historyByCountryandDate(let country, let date):
+            return ["country": country, "date": date]
+        case .latestStatByCountry(let country):
+            return ["country":country]
+        case .getWorldStat, .affectedCoutries ,.randomMaskUsageInstructions,.casesByCountry:
+            return nil
         }
     }
     
@@ -60,7 +71,24 @@ extension CoronaVirus: TargetType, AccessTokenAuthorizable {
     }
     
     var task: Task {
-        case .getWorldStat, .latestStatByCountry, .affectedCoutries, .randomMaskUsageInstructions, .historyCasesByParticularCountry, .historyByCountryandDate, .casesByCountry:
+        switch self {
+        case .getWorldStat, .affectedCoutries, .randomMaskUsageInstructions,.casesByCountry:
+        return .requestPlain
+        
+        default:
+        if let params = self.parameters {
+            var data = [MultipartFormData]()
+            for (key, value) in params {
+                if let str = value as? String {
+                    let v = str.data(using: .utf8)!
+                    data.append(MultipartFormData(provider: .data(v), name: key))
+                }
+            }
+            return .uploadCompositeMultipart(data, urlParameters: [:])
+        } else {
+            return .requestPlain
+        }
+        }
     }
     
     var headers: [String : String]? {
