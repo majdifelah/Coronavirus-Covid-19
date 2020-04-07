@@ -23,25 +23,25 @@ enum CoronaVirus {
 extension CoronaVirus: TargetType {
     /// The target's base `URL`.
     var baseURL: URL {
-        return URL(string: "https://coronavirus-monitor.p.rapidapi.com")!
+        return URL(string: "https://coronavirus-monitor.p.rapidapi.com/coronavirus")!
     }
     var path: String {
         
         switch self {
         case .getWorldStat:
-            return "/coronavirus/worldstat.php"
+            return "/worldstat.php"
         case .latestStatByCountry:
-            return ""
+            return "/latest_stat_by_country.php"
         case .affectedCoutries:
-            return ""
+            return "/affected.php"
         case .randomMaskUsageInstructions:
-            return ""
+            return "/random_masks_usage_instructions.php"
         case .historyCasesByParticularCountry:
-            return ""
+            return "/cases_by_particular_country.php"
         case .historyByCountryandDate:
-            return ""
+            return "/history_by_particular_country_by_date.php"
         case .casesByCountry:
-            return ""
+            return "/cases_by_country.php"
 
         }
     }

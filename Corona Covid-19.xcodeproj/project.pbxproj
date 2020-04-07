@@ -30,6 +30,8 @@
 		9A40B7C3243CBA8B0067F0AB /* AffectedCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7C2243CBA8B0067F0AB /* AffectedCountries.swift */; };
 		9A40B7C5243CBDAC0067F0AB /* CountryStatsHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7C4243CBDAC0067F0AB /* CountryStatsHistory.swift */; };
 		9A40B7C7243CC3E00067F0AB /* AllCasesByCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7C6243CC3E00067F0AB /* AllCasesByCountry.swift */; };
+		9A40B7C9243CD7370067F0AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7C8243CD7360067F0AB /* HomeViewController.swift */; };
+		9A40B7CB243CD85B0067F0AB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7CA243CD85B0067F0AB /* HomeViewModel.swift */; };
 		F8DFF816388FB45A35D228BD /* Pods_Corona_Covid_19_Corona_Covid_19UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C2590932AAC74C06DC2779 /* Pods_Corona_Covid_19_Corona_Covid_19UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		9A40B7C2243CBA8B0067F0AB /* AffectedCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffectedCountries.swift; sourceTree = "<group>"; };
 		9A40B7C4243CBDAC0067F0AB /* CountryStatsHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatsHistory.swift; sourceTree = "<group>"; };
 		9A40B7C6243CC3E00067F0AB /* AllCasesByCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCasesByCountry.swift; sourceTree = "<group>"; };
+		9A40B7C8243CD7360067F0AB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9A40B7CA243CD85B0067F0AB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9E97446E94EFC81568BEB70C /* Pods-Corona Covid-19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Covid-19.release.xcconfig"; path = "Target Support Files/Pods-Corona Covid-19/Pods-Corona Covid-19.release.xcconfig"; sourceTree = "<group>"; };
 		AB76BCDADCC74DC8E1008EED /* Pods-Corona Covid-19-Corona Covid-19UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Covid-19-Corona Covid-19UITests.debug.xcconfig"; path = "Target Support Files/Pods-Corona Covid-19-Corona Covid-19UITests/Pods-Corona Covid-19-Corona Covid-19UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED74C1C1700D556BBA96566A /* Pods-Corona Covid-19Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Covid-19Tests.debug.xcconfig"; path = "Target Support Files/Pods-Corona Covid-19Tests/Pods-Corona Covid-19Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				9A33A68A243228F2001BD8E3 /* SearchViewModel.swift */,
+				9A40B7CA243CD85B0067F0AB /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 			children = (
 				9A33A68C243228F2001BD8E3 /* Main.storyboard */,
 				9A33A6C324326135001BD8E3 /* SearchViewController.swift */,
+				9A40B7C8243CD7360067F0AB /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -503,8 +509,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A40B7B9243BE7CF0067F0AB /* WebService.swift in Sources */,
+				9A40B7CB243CD85B0067F0AB /* HomeViewModel.swift in Sources */,
 				9A40B7BD243CB2080067F0AB /* NetworkAdaptator.swift in Sources */,
 				9A33A6B7243232B5001BD8E3 /* APIManager.swift in Sources */,
+				9A40B7C9243CD7370067F0AB /* HomeViewController.swift in Sources */,
 				9A33A6C424326135001BD8E3 /* SearchViewController.swift in Sources */,
 				9A40B7C3243CBA8B0067F0AB /* AffectedCountries.swift in Sources */,
 				9A40B7C5243CBDAC0067F0AB /* CountryStatsHistory.swift in Sources */,
