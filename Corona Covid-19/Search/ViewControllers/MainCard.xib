@@ -39,7 +39,7 @@
                 <constraint firstItem="uBu-by-rLx" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="tM0-8N-OFb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="138.40000000000001" y="102.99850074962519"/>
+            <point key="canvasLocation" x="79" y="153"/>
         </view>
     </objects>
 </document>

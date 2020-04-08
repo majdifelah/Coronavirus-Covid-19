@@ -26,15 +26,12 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     
     var menuViewController: MenuViewController!
     var visualEffectView:UIVisualEffectView!
-    
     let cardHeight:CGFloat = 600
     let cardHandleAreaHeight:CGFloat = 65
-    
     var cardVisible = false
     var nextState:CardState {
         return cardVisible ? .collapsed : .expanded
     }
-    
     var runningAnimations = [UIViewPropertyAnimator]()
     var animationProgressWhenInterrupted:CGFloat = 0
     
@@ -53,7 +50,7 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupCard()
+        setupCard()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -80,7 +77,6 @@ class SearchViewController: UIViewController, ChartViewDelegate {
                     let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
-                        ////////////////////////
                         self.setupChart()
                     }
                     hud.hide(animated: true)
@@ -144,7 +140,7 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
-//Creation of PickerView
+//MARK:Creation of PickerView
 extension SearchViewController {
     func createCountriesPickerView() {
         let countriesPickerView = UIPickerView()
