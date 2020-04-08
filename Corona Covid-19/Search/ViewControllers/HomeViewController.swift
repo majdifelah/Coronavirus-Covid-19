@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkByCountryButton.layer.cornerRadius = 20.0
+        checkByCountryButton.layer.cornerRadius = 15.0
         view.backgroundColor = UIColor(rgb: 0x3C3B3B)
     }
     

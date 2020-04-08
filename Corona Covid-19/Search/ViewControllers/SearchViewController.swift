@@ -165,11 +165,13 @@ extension SearchViewController: UIPickerViewDataSource,UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return countriesAffected[row]
+        let sortedCountries = countriesAffected.sorted()
+        return sortedCountries[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedCountry = countriesAffected[row]
+        let sortedCountries = countriesAffected.sorted()
+        selectedCountry = sortedCountries[row]
         countriesTextField.text = selectedCountry
     }
 }
