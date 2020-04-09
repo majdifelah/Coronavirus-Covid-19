@@ -52,8 +52,8 @@ class HomeViewController: UIViewController {
                     let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     DispatchQueue.main.async {
                     self.totalCasesLabel.text = "Total Cases: \(self.homeListVM.totalCases)"
-                             self.totalDeathsLabel.text = "Total Deaths: \(self.homeListVM.totalDeaths)"
-                             self.totalRecoveredLabel.text = "Total Recovered: \(self.homeListVM.totalRecovered)"
+                             self.totalDeathsLabel.text = "Deaths: \(self.homeListVM.totalDeaths)"
+                             self.totalRecoveredLabel.text = "Recovered: \(self.homeListVM.totalRecovered)"
                              self.newCasesLabel.text = "\(self.homeListVM.newCases)"
                              self.newDeathsCases.text = "\(self.homeListVM.newDeaths)"
                        
