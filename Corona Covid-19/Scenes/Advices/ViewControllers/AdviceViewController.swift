@@ -19,21 +19,20 @@ class AdviceViewController: UIViewController {
         super.viewDidLoad()
         getImage()
         // Do any additional setup after loading the view.
+        
     }
     
 
   
     func getImage() {
-        
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         self.provider.request(.randomMaskUsageInstructions) {[weak self] result in
             guard let self = self else { return }
-            let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+            hud.hide(animated: true)
             switch result {
             case .success(let response):
-                
                 let data = response.data
                 self.downloadingImage.image = UIImage(data: data)
-                hud.hide(animated: true)
             case .failure(let error):
                 fatalError("\(String(describing: error.errorDescription!))")
             }

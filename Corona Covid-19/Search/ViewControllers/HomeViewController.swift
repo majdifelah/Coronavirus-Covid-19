@@ -45,11 +45,10 @@ class HomeViewController: UIViewController {
             case .success(let response):
                 let decoder = JSONDecoder()
                 let data = response.data
+                let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                 do {
                     let result = try decoder.decode(WorldStats.self, from: data)
                     self.homeListVM = HomeViewModel(result)
-                    
-                    let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     DispatchQueue.main.async {
                     self.totalCasesLabel.text = "Total Cases: \(self.homeListVM.totalCases)"
                              self.totalDeathsLabel.text = "Deaths: \(self.homeListVM.totalDeaths)"
