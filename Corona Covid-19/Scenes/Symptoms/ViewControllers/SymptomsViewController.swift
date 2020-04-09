@@ -24,12 +24,11 @@ class SymptomsViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let url = URL(string: "https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms-and-what-to-do/")!
         symptomsView.load(URLRequest(url: url))
         symptomsView.allowsBackForwardNavigationGestures = true
     }
-    
 
     /*
     // MARK: - Navigation
