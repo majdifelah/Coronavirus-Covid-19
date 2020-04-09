@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jxj-DZ-hMe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jxj-DZ-hMe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -212,6 +212,9 @@ Cg
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Bj-df-AAE">
                                 <rect key="frame" x="0.0" y="132" width="414" height="168"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="HSg-Mi-NFH"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchID" rowHeight="108" id="ebj-NK-hhZ" customClass="SearchTableViewCell" customModule="Corona_Covid_19" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="108"/>
@@ -291,29 +294,27 @@ Cg
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f87-6t-9Qj" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="308" width="374" height="374"/>
+                                <rect key="frame" x="20" y="359" width="374" height="374"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="dS9-fY-r22"/>
-                                    <constraint firstAttribute="height" constant="374" id="vOJ-nw-anT"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="f87-6t-9Qj" firstAttribute="centerX" secondItem="KX0-0z-9Vz" secondAttribute="centerX" id="EHC-31-Kt0"/>
+                            <constraint firstItem="DKD-tS-dET" firstAttribute="trailing" secondItem="f87-6t-9Qj" secondAttribute="trailing" constant="20" id="A6z-Mx-6c3"/>
+                            <constraint firstItem="3Bj-df-AAE" firstAttribute="trailing" secondItem="DKD-tS-dET" secondAttribute="trailing" id="HLR-0a-j5R"/>
+                            <constraint firstItem="f87-6t-9Qj" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" constant="20" id="I9i-q8-CjD"/>
                             <constraint firstItem="Ngu-Aq-KUM" firstAttribute="leading" secondItem="3Bj-df-AAE" secondAttribute="leading" id="KKe-vK-MhJ"/>
                             <constraint firstItem="3Bj-df-AAE" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" id="M4M-5Y-e6u"/>
                             <constraint firstItem="DKD-tS-dET" firstAttribute="trailing" secondItem="MP9-J0-zWM" secondAttribute="trailing" constant="20" id="Oqb-qA-vX6"/>
-                            <constraint firstItem="DKD-tS-dET" firstAttribute="bottom" secondItem="f87-6t-9Qj" secondAttribute="bottom" constant="131" id="R07-oF-1sF"/>
+                            <constraint firstItem="DKD-tS-dET" firstAttribute="bottom" secondItem="f87-6t-9Qj" secondAttribute="bottom" constant="80" id="U6f-eh-0XH"/>
                             <constraint firstItem="3Bj-df-AAE" firstAttribute="top" secondItem="Ngu-Aq-KUM" secondAttribute="bottom" id="c6H-F2-86R"/>
-                            <constraint firstItem="DKD-tS-dET" firstAttribute="trailing" secondItem="f87-6t-9Qj" secondAttribute="trailing" constant="20" id="dUn-TT-7Ld"/>
+                            <constraint firstItem="3Bj-df-AAE" firstAttribute="top" secondItem="Ngu-Aq-KUM" secondAttribute="bottom" id="dGk-AA-5Qu"/>
                             <constraint firstItem="MP9-J0-zWM" firstAttribute="top" secondItem="DKD-tS-dET" secondAttribute="top" constant="5" id="eLy-U5-tcd"/>
-                            <constraint firstItem="f87-6t-9Qj" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" constant="20" id="h7y-Zu-eX1"/>
                             <constraint firstItem="3Bj-df-AAE" firstAttribute="trailing" secondItem="DKD-tS-dET" secondAttribute="trailing" id="kao-Nj-Z9B"/>
+                            <constraint firstItem="f87-6t-9Qj" firstAttribute="top" secondItem="3Bj-df-AAE" secondAttribute="bottom" constant="59" id="kwq-12-j5H"/>
                             <constraint firstItem="Ngu-Aq-KUM" firstAttribute="top" secondItem="DKD-tS-dET" secondAttribute="top" id="mw4-xi-Ia0"/>
-                            <constraint firstItem="f87-6t-9Qj" firstAttribute="top" secondItem="3Bj-df-AAE" secondAttribute="bottom" constant="8" id="np9-Rb-K35"/>
                             <constraint firstItem="Ngu-Aq-KUM" firstAttribute="trailing" secondItem="3Bj-df-AAE" secondAttribute="trailing" id="oR6-WX-7bd"/>
+                            <constraint firstItem="3Bj-df-AAE" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" id="p0m-Ul-jm8"/>
                             <constraint firstItem="MP9-J0-zWM" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" constant="42" id="yh5-f1-RZK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DKD-tS-dET"/>
@@ -486,9 +487,9 @@ Cg
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.seal" catalog="system" width="64" height="60"/>
-        <image name="doc.plaintext" catalog="system" width="56" height="64"/>
-        <image name="globe" catalog="system" width="64" height="60"/>
-        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
+        <image name="checkmark.seal" catalog="system" width="128" height="122"/>
+        <image name="doc.plaintext" catalog="system" width="115" height="128"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
     </resources>
 </document>
