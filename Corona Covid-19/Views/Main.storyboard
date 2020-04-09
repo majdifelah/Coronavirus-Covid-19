@@ -142,9 +142,8 @@
                                     <constraint firstAttribute="bottom" secondItem="n8h-oG-3Qr" secondAttribute="bottom" constant="10" id="mPB-dT-qhH"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-Zd-aNd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-Zd-aNd">
                                 <rect key="frame" x="111" y="566" width="152" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Read more!">
@@ -158,9 +157,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ATp-Nc-7Wj" firstAttribute="top" secondItem="bnL-Ix-hU8" secondAttribute="top" constant="60" id="8H0-fu-bgw"/>
+                            <constraint firstItem="UAX-Zd-aNd" firstAttribute="top" secondItem="ATp-Nc-7Wj" secondAttribute="bottom" constant="8" id="M9j-nc-lzr"/>
                             <constraint firstItem="ATp-Nc-7Wj" firstAttribute="leading" secondItem="bnL-Ix-hU8" secondAttribute="leading" id="P7e-Kw-oNe"/>
                             <constraint firstItem="bnL-Ix-hU8" firstAttribute="trailing" secondItem="ATp-Nc-7Wj" secondAttribute="trailing" id="YTO-t0-fpc"/>
                             <constraint firstItem="bnL-Ix-hU8" firstAttribute="bottom" secondItem="ATp-Nc-7Wj" secondAttribute="bottom" constant="60" id="bEa-Qm-6em"/>
+                            <constraint firstItem="bnL-Ix-hU8" firstAttribute="trailing" secondItem="UAX-Zd-aNd" secondAttribute="trailing" constant="112" id="l5C-Up-dwN"/>
+                            <constraint firstItem="UAX-Zd-aNd" firstAttribute="leading" secondItem="bnL-Ix-hU8" secondAttribute="leading" constant="111" id="p4i-a5-8ub"/>
+                            <constraint firstItem="bnL-Ix-hU8" firstAttribute="bottom" secondItem="UAX-Zd-aNd" secondAttribute="bottom" constant="16" id="vfc-MQ-e30"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bnL-Ix-hU8"/>
                     </view>
@@ -502,7 +505,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKM-gV-6KZ">
                                                     <rect key="frame" x="108" y="11" width="252" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.94853371351503479" green="0.7636712417666216" blue="0.20692532811265843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
