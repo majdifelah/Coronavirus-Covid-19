@@ -7,24 +7,33 @@
 //
 
 import UIKit
+import Moya
 
 class AdviceViewController: UIViewController {
 
+    @IBOutlet weak var downloadingImage: UIImageView!
+    let provider = MoyaProvider<CoronaVirus>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getImage()
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+  
+    func getImage() {
+        
+        self.provider.request(.randomMaskUsageInstructions) {[weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                let data = response.data
+                self.downloadingImage.image = UIImage(data: data)
+            case .failure(let error):
+                fatalError("\(String(describing: error.errorDescription!))")
+            }
+            
+        }
     }
-    */
-
 }

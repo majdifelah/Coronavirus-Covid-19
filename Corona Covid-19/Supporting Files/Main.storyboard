@@ -122,84 +122,44 @@
         <!--Advice-->
         <scene sceneID="6Nm-iV-smj">
             <objects>
-                <viewController id="Wth-bT-jEb" sceneMemberID="viewController">
+                <viewController id="Wth-bT-jEb" customClass="AdviceViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0li-2p-iae">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gsg-Z6-Kgc">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATp-Nc-7Wj">
+                                <rect key="frame" x="0.0" y="104" width="375" height="454"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64j-e4-LzZ">
-                                        <rect key="frame" x="25" y="25" width="330" height="524"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">1. Stay at home. 
-2. Only go outside for food, health reasons or work (but only if you cannot work from home) 
-3. If you go out, stay 2 metres (6ft) away from other people at all times
- 4. Wash your hands as soon as you get home
- 5. Do not meet others, even friends or family.</string>
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="19" name="Menlo-Regular"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="22" name="Menlo-Regular"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content"> 
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="20" name="Menlo-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="You can spread the virus even if you don’t have symptoms.">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="22" name="Menlo-Bold"/>
-                                                    <font key="NSOriginalFont" size="22" name="Menlo-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n8h-oG-3Qr">
+                                        <rect key="frame" x="10" y="10" width="355" height="434"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="64j-e4-LzZ" firstAttribute="top" secondItem="Gsg-Z6-Kgc" secondAttribute="top" constant="25" id="56N-jq-ydN"/>
-                                    <constraint firstAttribute="trailing" secondItem="64j-e4-LzZ" secondAttribute="trailing" constant="20" id="Fml-dM-Q4m"/>
-                                    <constraint firstAttribute="bottom" secondItem="64j-e4-LzZ" secondAttribute="bottom" constant="25" id="RVW-44-udy"/>
-                                    <constraint firstItem="64j-e4-LzZ" firstAttribute="leading" secondItem="Gsg-Z6-Kgc" secondAttribute="leading" constant="25" id="wDs-Gk-eHG"/>
+                                    <constraint firstAttribute="trailing" secondItem="n8h-oG-3Qr" secondAttribute="trailing" constant="10" id="3zK-yD-rHN"/>
+                                    <constraint firstItem="n8h-oG-3Qr" firstAttribute="top" secondItem="ATp-Nc-7Wj" secondAttribute="top" constant="10" id="W3p-f3-Z0M"/>
+                                    <constraint firstItem="n8h-oG-3Qr" firstAttribute="leading" secondItem="ATp-Nc-7Wj" secondAttribute="leading" constant="10" id="bRg-NG-eMh"/>
+                                    <constraint firstAttribute="bottom" secondItem="n8h-oG-3Qr" secondAttribute="bottom" constant="10" id="mPB-dT-qhH"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bnL-Ix-hU8" firstAttribute="trailing" secondItem="Gsg-Z6-Kgc" secondAttribute="trailing" id="H5O-8Z-xly"/>
-                            <constraint firstItem="Gsg-Z6-Kgc" firstAttribute="leading" secondItem="bnL-Ix-hU8" secondAttribute="leading" id="Nhy-vg-7t4"/>
-                            <constraint firstItem="bnL-Ix-hU8" firstAttribute="bottom" secondItem="Gsg-Z6-Kgc" secondAttribute="bottom" id="g9D-bA-bTp"/>
-                            <constraint firstItem="Gsg-Z6-Kgc" firstAttribute="top" secondItem="bnL-Ix-hU8" secondAttribute="top" id="vsq-RI-FUo"/>
+                            <constraint firstItem="ATp-Nc-7Wj" firstAttribute="top" secondItem="bnL-Ix-hU8" secondAttribute="top" constant="60" id="8H0-fu-bgw"/>
+                            <constraint firstItem="ATp-Nc-7Wj" firstAttribute="leading" secondItem="bnL-Ix-hU8" secondAttribute="leading" id="P7e-Kw-oNe"/>
+                            <constraint firstItem="bnL-Ix-hU8" firstAttribute="trailing" secondItem="ATp-Nc-7Wj" secondAttribute="trailing" id="YTO-t0-fpc"/>
+                            <constraint firstItem="bnL-Ix-hU8" firstAttribute="bottom" secondItem="ATp-Nc-7Wj" secondAttribute="bottom" constant="60" id="bEa-Qm-6em"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bnL-Ix-hU8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Advice" id="mqs-8V-m9N"/>
+                    <connections>
+                        <outlet property="downloadingImage" destination="n8h-oG-3Qr" id="bLk-7N-UQC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="To9-DG-4fR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2229.5999999999999" y="949.47526236881572"/>
+            <point key="canvasLocation" x="2181.5999999999999" y="948.57571214392806"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="VOE-V3-UpQ">
@@ -620,6 +580,88 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGS-hC-5le" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3081" y="-447"/>
+        </scene>
+        <!--Advice-->
+        <scene sceneID="yd7-Sa-2qr">
+            <objects>
+                <viewController id="IdC-Ms-VlU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tmk-Fz-itb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNQ-lr-Tkj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9r-qu-y2d">
+                                        <rect key="frame" x="25" y="25" width="330" height="617"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">1. Stay at home. 
+2. Only go outside for food, health reasons or work (but only if you cannot work from home) 
+3. If you go out, stay 2 metres (6ft) away from other people at all times
+ 4. Wash your hands as soon as you get home
+ 5. Do not meet others, even friends or family.</string>
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="19" name="Menlo-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="22" name="Menlo-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content"> 
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="20" name="Menlo-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="You can spread the virus even if you don’t have symptoms.">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="22" name="Menlo-Bold"/>
+                                                    <font key="NSOriginalFont" size="22" name="Menlo-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="S9r-qu-y2d" firstAttribute="leading" secondItem="JNQ-lr-Tkj" secondAttribute="leading" constant="25" id="16M-pn-6CC"/>
+                                    <constraint firstAttribute="trailing" secondItem="S9r-qu-y2d" secondAttribute="trailing" constant="20" id="LQl-Jk-HUS"/>
+                                    <constraint firstItem="S9r-qu-y2d" firstAttribute="top" secondItem="JNQ-lr-Tkj" secondAttribute="top" constant="25" id="VA7-HK-j7g"/>
+                                    <constraint firstAttribute="bottom" secondItem="S9r-qu-y2d" secondAttribute="bottom" constant="25" id="plI-KA-Tv7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JNQ-lr-Tkj" firstAttribute="top" secondItem="Id7-gd-kio" secondAttribute="top" id="7hy-yo-d7y"/>
+                            <constraint firstItem="Id7-gd-kio" firstAttribute="trailing" secondItem="JNQ-lr-Tkj" secondAttribute="trailing" id="BB5-7G-hr3"/>
+                            <constraint firstItem="JNQ-lr-Tkj" firstAttribute="leading" secondItem="Id7-gd-kio" secondAttribute="leading" id="GhI-W6-ENV"/>
+                            <constraint firstItem="Id7-gd-kio" firstAttribute="bottom" secondItem="JNQ-lr-Tkj" secondAttribute="bottom" id="tXz-MN-BLV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Id7-gd-kio"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Advice" id="zzl-4G-UyV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FbA-zT-69g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2910" y="930"/>
         </scene>
     </scenes>
     <resources>
