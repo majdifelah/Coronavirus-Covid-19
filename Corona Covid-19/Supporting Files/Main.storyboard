@@ -142,6 +142,17 @@
                                     <constraint firstAttribute="bottom" secondItem="n8h-oG-3Qr" secondAttribute="bottom" constant="10" id="mPB-dT-qhH"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-Zd-aNd">
+                                <rect key="frame" x="111" y="566" width="152" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Read more!">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IdC-Ms-VlU" kind="show" id="aO2-dc-R4u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -581,7 +592,7 @@
             </objects>
             <point key="canvasLocation" x="3081" y="-447"/>
         </scene>
-        <!--Advice-->
+        <!--View Controller-->
         <scene sceneID="yd7-Sa-2qr">
             <objects>
                 <viewController id="IdC-Ms-VlU" sceneMemberID="viewController">
@@ -590,10 +601,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNQ-lr-Tkj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9r-qu-y2d">
-                                        <rect key="frame" x="25" y="25" width="330" height="617"/>
+                                        <rect key="frame" x="25" y="25" width="330" height="524"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -657,11 +668,11 @@ Cg
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Id7-gd-kio"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Advice" id="zzl-4G-UyV"/>
+                    <navigationItem key="navigationItem" id="zzl-4G-UyV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbA-zT-69g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2910" y="930"/>
+            <point key="canvasLocation" x="2996" y="949"/>
         </scene>
     </scenes>
     <resources>
