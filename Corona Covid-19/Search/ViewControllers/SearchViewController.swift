@@ -37,7 +37,7 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     
     private var searchListVM: SearchListViewModel!
     let provider = MoyaProvider<CoronaVirus>()
-    let apiManager = APIManager()
+    let decoder = JSONDecoder()
     var countryCovidStat: [LatestStatByCountry] = []
     var countriesAffected: [String] = []
     var selectedCountry: String?
@@ -50,7 +50,7 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCard()
+        //setupCard()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -67,10 +67,10 @@ class SearchViewController: UIViewController, ChartViewDelegate {
             
             switch result {
             case .success(let response):
-                let decoder = JSONDecoder()
+                
                 let data = response.data
                 do {
-                    let result = try decoder.decode(CountryLiveStats.self, from: data)
+                    let result = try self.decoder.decode(CountryLiveStats.self, from: data)
                     self.countryCovidStat = result.latestStatByCountry
                     self.searchListVM = SearchListViewModel(countryCovidStats: self.countryCovidStat)
                     self.setupChart()
@@ -96,10 +96,9 @@ class SearchViewController: UIViewController, ChartViewDelegate {
             
             switch result {
             case .success(let response):
-                let decoder = JSONDecoder()
                 let data = response.data
                 do {
-                    let result = try decoder.decode(AffectedCountries.self, from: data)
+                    let result = try self.decoder.decode(AffectedCountries.self, from: data)
                     self.countriesAffected = result.affectedCountries
                 } catch {
                     
