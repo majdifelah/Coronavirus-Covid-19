@@ -67,19 +67,21 @@ class SearchViewController: UIViewController, ChartViewDelegate {
             
             switch result {
             case .success(let response):
-                
+                let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                 let data = response.data
                 do {
+                    
                     let result = try self.decoder.decode(CountryLiveStats.self, from: data)
                     self.countryCovidStat = result.latestStatByCountry
                     self.searchListVM = SearchListViewModel(countryCovidStats: self.countryCovidStat)
                     self.setupChart()
-                    let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+                    
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                         self.setupChart()
+                       
                     }
-                    hud.hide(animated: true)
+                     hud.hide(animated: true)
                 } catch {
                     
                     fatalError("fatal error while getting world Stats")

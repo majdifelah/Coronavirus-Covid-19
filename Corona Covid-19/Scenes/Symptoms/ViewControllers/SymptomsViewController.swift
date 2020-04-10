@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-
+import MBProgressHUD
 
 class SymptomsViewController: UIViewController, WKNavigationDelegate {
 
@@ -24,12 +24,14 @@ class SymptomsViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         
         let url = URL(string: "https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms-and-what-to-do/")!
+        hud.hide(animated: true)
         symptomsView.load(URLRequest(url: url))
         symptomsView.allowsBackForwardNavigationGestures = true
+        
     }
-    
 
     /*
     // MARK: - Navigation
