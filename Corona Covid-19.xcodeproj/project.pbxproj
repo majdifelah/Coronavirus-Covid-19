@@ -251,7 +251,7 @@
 		9A33A6BC24325762001BD8E3 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				9A40B7B7243BE0C10067F0AB /* Cells */,
+				9A40B7B7243BE0C10067F0AB /* Customs Cells */,
 				9A33A6BE24325776001BD8E3 /* Models */,
 				9A33A6C124325799001BD8E3 /* ViewControllers */,
 				9A33A6C024325786001BD8E3 /* ViewModels */,
@@ -309,12 +309,12 @@
 			path = "Web Services";
 			sourceTree = "<group>";
 		};
-		9A40B7B7243BE0C10067F0AB /* Cells */ = {
+		9A40B7B7243BE0C10067F0AB /* Customs Cells */ = {
 			isa = PBXGroup;
 			children = (
 				9A33A6C524326802001BD8E3 /* SearchTableViewCell.swift */,
 			);
-			path = Cells;
+			path = "Customs Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
