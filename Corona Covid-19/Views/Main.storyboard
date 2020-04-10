@@ -630,15 +630,23 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">1. Stay at home. 
+                                                <mutableString key="content">1. Stay at home. 
 2. Only go outside for food, health reasons or work (but only if you cannot work from home) 
 3. If you go out, stay 2 metres (6ft) away from other people at all times
  4. Wash your hands as soon as you get home
- 5. Do not meet others, even friends or family.</string>
+ 5. Do not meet others, even friends or family.
+</mutableString>
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="19" name="Menlo-Regular"/>
+                                                    <font key="NSFont" size="20" name="Helvetica-Bold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="20" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
@@ -647,23 +655,14 @@ Cg
 </string>
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="22" name="Menlo-Regular"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content"> 
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="20" name="Menlo-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <font key="NSFont" size="22" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="You can spread the virus even if you don’t have symptoms.">
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="22" name="Menlo-Bold"/>
+                                                    <font key="NSFont" size="22" name="Helvetica-Bold"/>
                                                     <font key="NSOriginalFont" size="22" name="Menlo-Bold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -708,7 +707,7 @@ Cg
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBy-fh-IFt">
-                                        <rect key="frame" x="25" y="141" width="330" height="409"/>
+                                        <rect key="frame" x="25" y="109" width="330" height="441"/>
                                         <color key="backgroundColor" red="0.97305089235305786" green="0.97178311122382532" blue="0.88918424122421458" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <mutableString key="text">  1.Chronic (long-term) respiratory diseases, such as asthma, chronic obstructive pulmonary disease (COPD), emphysema or bronchitis
    2. Chronic heart disease, such as heart failure
@@ -778,7 +777,7 @@ Cg
                                 <color key="backgroundColor" red="0.97191852331161499" green="0.97422748804092407" blue="0.87841802835464478" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="0qh-bU-8BQ" firstAttribute="top" secondItem="iBG-6F-BGe" secondAttribute="top" constant="40" id="1qe-my-Jm9"/>
-                                    <constraint firstItem="NBy-fh-IFt" firstAttribute="top" secondItem="0qh-bU-8BQ" secondAttribute="bottom" constant="32" id="CNQ-fx-Wwq"/>
+                                    <constraint firstItem="NBy-fh-IFt" firstAttribute="top" secondItem="0qh-bU-8BQ" secondAttribute="bottom" id="CNQ-fx-Wwq"/>
                                     <constraint firstItem="0qh-bU-8BQ" firstAttribute="leading" secondItem="iBG-6F-BGe" secondAttribute="leading" constant="10" id="KgQ-Zm-dXa"/>
                                     <constraint firstAttribute="trailing" secondItem="NBy-fh-IFt" secondAttribute="trailing" constant="20" id="Rnc-bq-Vej"/>
                                     <constraint firstAttribute="trailing" secondItem="0qh-bU-8BQ" secondAttribute="trailing" constant="10" id="VR1-m9-ERu"/>
