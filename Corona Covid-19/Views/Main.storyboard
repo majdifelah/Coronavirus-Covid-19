@@ -73,7 +73,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="JS4-Uj-sEo" kind="relationship" relationship="viewControllers" id="jac-UX-mAb"/>
-                        <segue destination="ZMc-z0-eXi" kind="relationship" relationship="viewControllers" id="7oi-fU-R45"/>
                         <segue destination="kY2-lK-vb2" kind="relationship" relationship="viewControllers" id="KR6-yt-YMv"/>
                         <segue destination="Xn3-c4-4gd" kind="relationship" relationship="viewControllers" id="rlx-Zj-H0J"/>
                     </connections>
@@ -145,10 +144,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATp-Nc-7Wj">
-                                <rect key="frame" x="0.0" y="148" width="375" height="521"/>
+                                <rect key="frame" x="0.0" y="133" width="375" height="512"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n8h-oG-3Qr">
-                                        <rect key="frame" x="10" y="10" width="355" height="501"/>
+                                        <rect key="frame" x="10" y="4" width="355" height="496"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -160,7 +159,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-Zd-aNd">
-                                <rect key="frame" x="16" y="540" width="142" height="34"/>
+                                <rect key="frame" x="16" y="651" width="142" height="34"/>
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="Mbt-l7-OtI"/>
@@ -175,7 +174,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Eu-ke-409">
-                                <rect key="frame" x="217" y="540" width="142" height="34"/>
+                                <rect key="frame" x="217" y="651" width="142" height="34"/>
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Who's vulnerable">
@@ -220,7 +219,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Bj-df-AAE">
-                                <rect key="frame" x="0.0" y="100" width="375" height="168"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="168"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="168" id="VJl-K3-p32"/>
@@ -289,14 +288,14 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Ngu-Aq-KUM">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="gQC-sZ-YBo" id="5Nm-dM-ucf"/>
                                 </connections>
                             </searchBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MP9-J0-zWM">
-                                <rect key="frame" x="42" y="49" width="317" height="34"/>
+                                <rect key="frame" x="42" y="93" width="317" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="zMn-Pv-9g9"/>
                                 </constraints>
@@ -304,7 +303,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f87-6t-9Qj" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="327" width="343" height="552"/>
+                                <rect key="frame" x="16" y="371" width="343" height="653"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -360,49 +359,49 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Covid-19 Live World Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lo-6Y-gw9">
-                                <rect key="frame" x="54" y="97.5" width="267" height="27.5"/>
+                                <rect key="frame" x="54" y="141.66666666666666" width="267" height="27.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Cases:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcr-40-eGm">
-                                <rect key="frame" x="20" y="241" width="335" height="25.666666666666686"/>
+                                <rect key="frame" x="20" y="241.33333333333334" width="335" height="25.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.96470588239999999" green="0.77647058820000003" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM8-X1-W7s">
-                                <rect key="frame" x="20" y="291.66666666666669" width="335" height="25.333333333333314"/>
+                                <rect key="frame" x="20" y="292" width="335" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZA-J3-hYx">
-                                <rect key="frame" x="20" y="342" width="335" height="25.666666666666686"/>
+                                <rect key="frame" x="20" y="342.33333333333331" width="335" height="25.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cases" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZM-00-0r6">
-                                <rect key="frame" x="20" y="417.66666666666669" width="156.33333333333334" height="26.333333333333314"/>
+                                <rect key="frame" x="20" y="418" width="156.33333333333334" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-RS-XjK">
-                                <rect key="frame" x="20" y="455" width="156.33333333333334" height="21"/>
+                                <rect key="frame" x="20" y="455.33333333333331" width="156.33333333333334" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.96470588239999999" green="0.77647058820000003" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Deaths:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmh-la-Qah">
-                                <rect key="frame" x="199.33333333333337" y="417.66666666666669" width="155.66666666666663" height="26.333333333333314"/>
+                                <rect key="frame" x="199.33333333333337" y="418" width="155.66666666666663" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOj-b8-kwg">
-                                <rect key="frame" x="199.33333333333337" y="455" width="155.66666666666663" height="21"/>
+                                <rect key="frame" x="199.33333333333337" y="455.33333333333331" width="155.66666666666663" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -516,7 +515,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vKU-Nl-olB" customClass="SDAnimatedImageView">
-                                                    <rect key="frame" x="15" y="11.5" width="85" height="81.5"/>
+                                                    <rect key="frame" x="15" y="12.333333333333336" width="85" height="81.000000000000014"/>
                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="83" id="R5F-Nt-LSy"/>
@@ -647,12 +646,12 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <mutableString key="content">1. Stay at home. 
+                                                <string key="content">1. Stay at home. 
 2. Only go outside for food, health reasons or work (but only if you cannot work from home) 
 3. If you go out, stay 2 metres (6ft) away from other people at all times
  4. Wash your hands as soon as you get home
  5. Do not meet others, even friends or family.
-</mutableString>
+</string>
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <font key="NSFont" size="20" name="Helvetica-Bold"/>
@@ -717,23 +716,23 @@ Cg
             <objects>
                 <viewController id="UhB-ns-o7R" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fYf-IQ-Om8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBG-6F-BGe">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBy-fh-IFt">
-                                        <rect key="frame" x="25" y="109" width="330" height="441"/>
+                                        <rect key="frame" x="25" y="109" width="330" height="508"/>
                                         <color key="backgroundColor" red="0.97305089235305786" green="0.97178311122382532" blue="0.88918424122421458" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <mutableString key="text">  1.Chronic (long-term) respiratory diseases, such as asthma, chronic obstructive pulmonary disease (COPD), emphysema or bronchitis
+                                        <string key="text">  1.Chronic (long-term) respiratory diseases, such as asthma, chronic obstructive pulmonary disease (COPD), emphysema or bronchitis
    2. Chronic heart disease, such as heart failure
    3. Chronic kidney disease
    4. Chronic liver disease, such as hepatitis
    5. Chronic neurological conditions, such as Parkinson’s disease, motor neurone disease, multiple sclerosis (MS), a learning disability or cerebral palsy
    6. Diabetes 
   7. Problems with your spleen – for example, sickle cell disease or if you have had your spleen removed
-   8. A weakened immune system as the result of conditions such as HIV and AIDS, or medicines such as steroid tablets or chemotherapy    9. Being seriously overweight (a body mass index ( BMI ) of 40 or above)</mutableString>
+   8. A weakened immune system as the result of conditions such as HIV and AIDS, or medicines such as steroid tablets or chemotherapy    9. Being seriously overweight (a body mass index ( BMI ) of 40 or above)</string>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -745,46 +744,7 @@ Cg
                                                 <attributes>
                                                     <color key="NSColor" red="0.81960999999999995" green="0.039219999999999998" blue="0.066669999999999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="20" name="Helvetica-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -824,7 +784,6 @@ Cg
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="square.and.pencil" catalog="system" width="128" height="118"/>
     </resources>
 </document>

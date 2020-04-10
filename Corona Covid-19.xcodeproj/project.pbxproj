@@ -175,6 +175,7 @@
 			children = (
 				9A32DF4F243F89CE00D03BCE /* Advices */,
 				9A32DF4E243F89B000D03BCE /* Symptoms */,
+				9A33A6BC24325762001BD8E3 /* Search */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -224,7 +225,6 @@
 				9A33A6C2243257DB001BD8E3 /* Web Services */,
 				9A32DF4D243F897700D03BCE /* Views */,
 				9A32DF50243F89D700D03BCE /* Scenes */,
-				9A33A6BC24325762001BD8E3 /* Search */,
 				9A33A694243228F8001BD8E3 /* Info.plist */,
 			);
 			path = "Corona Covid-19";
