@@ -18,8 +18,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var newCasesLabel: UILabel!
     @IBOutlet weak var newDeathsCases: UILabel!
     @IBOutlet weak var checkByCountryButton: UIButton!
-    
-    
+
+    @IBOutlet weak var currentTimeLabel: UILabel!
+
+    var timer = Timer()
     private var homeListVM: HomeViewModel!
     
     let provider = MoyaProvider<CoronaVirus>()
@@ -28,11 +30,20 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         checkByCountryButton.layer.cornerRadius = 15.0
         view.backgroundColor = UIColor(rgb: 0x3C3B3B)
+       timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
     }
+    
+    @objc func tick() {
+                currentTimeLabel.text = DateFormatter.localizedString(from: Date(),
+                                                                      dateStyle: .medium,
+                                                                      timeStyle: .medium)
+            }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
             self.getWorldStats()
+            self.tick()
+        
     }
     
     func getWorldStats() {
