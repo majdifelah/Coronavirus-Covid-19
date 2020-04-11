@@ -13,12 +13,16 @@ import MBProgressHUD
 class AdviceViewController: UIViewController {
 
     @IBOutlet weak var downloadingImage: UIImageView!
+    @IBOutlet weak var adviceButton: UIButton!
+    @IBOutlet weak var whosVulnerableButton: UIButton!
+    
     let provider = MoyaProvider<CoronaVirus>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getImage()
-        // Do any additional setup after loading the view.
+        adviceButton.layer.cornerRadius = 15.0
+        whosVulnerableButton.layer.cornerRadius = 15.0
         
     }
     
