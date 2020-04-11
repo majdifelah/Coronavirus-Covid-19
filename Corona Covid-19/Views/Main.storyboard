@@ -10,7 +10,8 @@
         <!--Live Cases-->
         <scene sceneID="ueu-gM-RJ7">
             <objects>
-                <navigationController title="Live Cases" automaticallyAdjustsScrollViewInsets="NO" id="JS4-Uj-sEo" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfO-Gg-33W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="liveCasesNC" title="Live Cases" automaticallyAdjustsScrollViewInsets="NO" id="JS4-Uj-sEo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Live Cases" image="globe" catalog="system" id="Y5G-6I-Woz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="goo-gv-Esu">
@@ -22,14 +23,13 @@
                         <segue destination="gz4-35-q3V" kind="relationship" relationship="rootViewController" id="qU0-KQ-9EC"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vfO-Gg-33W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048" y="-445"/>
         </scene>
         <!--Symptoms-->
         <scene sceneID="ehx-F8-DVf">
             <objects>
-                <viewController id="vR6-0l-JW7" customClass="SymptomsViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="symptomsVC" id="vR6-0l-JW7" customClass="SymptomsViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2lp-fB-2xe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,6 +59,127 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k27-dP-9tV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2030" y="225"/>
+        </scene>
+        <!--Welcome Screen View Controller-->
+        <scene sceneID="wNn-6c-gzK">
+            <objects>
+                <viewController id="OAn-eK-4yT" customClass="WelcomeScreenViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xwO-KE-Bon">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covid-19" translatesAutoresizingMaskIntoConstraints="NO" id="hel-2i-6Z2">
+                                <rect key="frame" x="84" y="259" width="207" height="149"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Covid-19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwz-xP-ye0">
+                                <rect key="frame" x="153" y="445" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.24313725490196078" green="0.69411764705882351" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hel-2i-6Z2" firstAttribute="centerX" secondItem="xwO-KE-Bon" secondAttribute="centerX" id="IDG-uj-RI7"/>
+                            <constraint firstItem="hwz-xP-ye0" firstAttribute="top" secondItem="hel-2i-6Z2" secondAttribute="bottom" constant="37" id="aJb-5N-yDe"/>
+                            <constraint firstItem="hel-2i-6Z2" firstAttribute="centerY" secondItem="xwO-KE-Bon" secondAttribute="centerY" id="lm2-Jh-8Y6"/>
+                            <constraint firstItem="hwz-xP-ye0" firstAttribute="centerX" secondItem="xwO-KE-Bon" secondAttribute="centerX" id="s4J-kI-ZGx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uQ6-U6-q2K"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPr-9d-l7x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3260" y="2115.2923538230884"/>
+        </scene>
+        <!--Introduction View Controller-->
+        <scene sceneID="E4k-ZS-aif">
+            <objects>
+                <viewController storyboardIdentifier="introductionScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6mz-fo-vZQ" customClass="IntroductionViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5k3-s0-Fcd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notice" translatesAutoresizingMaskIntoConstraints="NO" id="5jK-Cc-jyF">
+                                <rect key="frame" x="10" y="83" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bti-XY-Nc0"/>
+                                    <constraint firstAttribute="height" constant="50" id="bvw-yQ-ssp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is COVID-19?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oM-bt-jqK">
+                                <rect key="frame" x="10" y="143" width="355" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULh-7G-qJO">
+                                <rect key="frame" x="10" y="177" width="355" height="81.5"/>
+                                <string key="text">COVID-19 is the new respiratory disease spreading around the world and it is caused by a coronavirus. COVID-19 is short for “coronavirus disease 2019”</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What To Know " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iff-9d-T8o">
+                                <rect key="frame" x="10" y="276.5" width="355" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdR-n2-3nx">
+                                <rect key="frame" x="10" y="320.5" width="355" height="264"/>
+                                <string key="text">The virus is thought to spread mainly between people who are in close contact with one another (about 6 feet) and through respiratory droplets produced when an infected person coughs or sneezes.
+
+People are most contagious when they are the sickest. But those who don’t have a lot of symptoms can still pass the virus on to others.
+
+There is currently no vaccine or cure for COVID-19 but researchers are working hard to find one.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgl-GR-IN1">
+                                <rect key="frame" x="50" y="599" width="262" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jFD-XI-4ZY"/>
+                                    <constraint firstAttribute="width" constant="262" id="lbt-ab-Rif"/>
+                                </constraints>
+                                <state key="normal" title="Welcome">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="welcomeButtonAction:" destination="6mz-fo-vZQ" eventType="touchUpInside" id="paw-Cz-gBb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ULh-7G-qJO" firstAttribute="leading" secondItem="2oM-bt-jqK" secondAttribute="leading" id="5li-x7-eHy"/>
+                            <constraint firstItem="FdR-n2-3nx" firstAttribute="trailing" secondItem="iff-9d-T8o" secondAttribute="trailing" id="6Rb-PP-Ncb"/>
+                            <constraint firstItem="2oM-bt-jqK" firstAttribute="leading" secondItem="1S0-WQ-QX9" secondAttribute="leading" constant="10" id="Dv2-P6-tdV"/>
+                            <constraint firstItem="ULh-7G-qJO" firstAttribute="top" secondItem="2oM-bt-jqK" secondAttribute="bottom" constant="7.6666666666666856" id="ENT-cC-kao"/>
+                            <constraint firstItem="ULh-7G-qJO" firstAttribute="trailing" secondItem="2oM-bt-jqK" secondAttribute="trailing" id="JPZ-b8-vMQ"/>
+                            <constraint firstItem="2oM-bt-jqK" firstAttribute="top" secondItem="5jK-Cc-jyF" secondAttribute="bottom" constant="10" id="Pdc-sa-GPs"/>
+                            <constraint firstItem="FdR-n2-3nx" firstAttribute="top" secondItem="iff-9d-T8o" secondAttribute="bottom" constant="20" id="Trr-2W-XHS"/>
+                            <constraint firstItem="FdR-n2-3nx" firstAttribute="leading" secondItem="2oM-bt-jqK" secondAttribute="leading" id="UHG-UT-2yv"/>
+                            <constraint firstItem="iff-9d-T8o" firstAttribute="top" secondItem="ULh-7G-qJO" secondAttribute="bottom" constant="17.666666666666686" id="Uee-UQ-6yE"/>
+                            <constraint firstItem="FdR-n2-3nx" firstAttribute="leading" secondItem="iff-9d-T8o" secondAttribute="leading" id="ZYx-yA-p28"/>
+                            <constraint firstItem="1S0-WQ-QX9" firstAttribute="trailing" secondItem="2oM-bt-jqK" secondAttribute="trailing" constant="10" id="fmH-yl-z9N"/>
+                            <constraint firstItem="5jK-Cc-jyF" firstAttribute="top" secondItem="1S0-WQ-QX9" secondAttribute="top" constant="83" id="ixp-JJ-5iZ"/>
+                            <constraint firstItem="1S0-WQ-QX9" firstAttribute="bottom" secondItem="Hgl-GR-IN1" secondAttribute="bottom" constant="18" id="jCo-1g-w43"/>
+                            <constraint firstItem="FdR-n2-3nx" firstAttribute="trailing" secondItem="2oM-bt-jqK" secondAttribute="trailing" id="nDV-Cf-YBy"/>
+                            <constraint firstItem="Hgl-GR-IN1" firstAttribute="centerX" secondItem="5k3-s0-Fcd" secondAttribute="centerX" constant="-6.5" id="pKA-VP-qQq"/>
+                            <constraint firstItem="5jK-Cc-jyF" firstAttribute="leading" secondItem="1S0-WQ-QX9" secondAttribute="leading" constant="10" id="wqo-B7-YUt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1S0-WQ-QX9"/>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeButton" destination="Hgl-GR-IN1" id="3A8-9d-TlU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDC-3k-9fO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2503.1999999999998" y="2115.2923538230884"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6US-cI-Rll">
@@ -124,7 +245,7 @@
         <!--Live Check View Controller-->
         <scene sceneID="Jxe-6k-Po4">
             <objects>
-                <viewController id="bVK-yU-9wr" customClass="LiveCheckViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="liveCheck" id="bVK-yU-9wr" customClass="LiveCheckViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Kr-5m-YV9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +261,7 @@
         <!--Test Booking View Controller-->
         <scene sceneID="LpI-3Y-w4p">
             <objects>
-                <viewController id="5zf-BD-gLF" customClass="TestBookingViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="testBookingVC" id="5zf-BD-gLF" customClass="TestBookingViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tBF-gE-IqZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,7 +277,7 @@
         <!--Masks-->
         <scene sceneID="6Nm-iV-smj">
             <objects>
-                <viewController id="Wth-bT-jEb" customClass="AdviceViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="advicesVC" id="Wth-bT-jEb" customClass="AdviceViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0li-2p-iae">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,11 +298,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-Zd-aNd">
-                                <rect key="frame" x="16" y="540" width="142" height="47"/>
+                                <rect key="frame" x="16" y="540" width="142" height="50"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="Mbt-l7-OtI"/>
-                                    <constraint firstAttribute="height" constant="47" id="Tps-RS-K8o"/>
+                                    <constraint firstAttribute="height" constant="50" id="Tps-RS-K8o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Advices">
@@ -192,7 +313,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Eu-ke-409">
-                                <rect key="frame" x="217" y="540" width="142" height="47"/>
+                                <rect key="frame" x="217" y="540" width="142" height="50"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Who's vulnerable">
@@ -211,7 +332,7 @@
                             <constraint firstItem="6Eu-ke-409" firstAttribute="leading" secondItem="UAX-Zd-aNd" secondAttribute="trailing" constant="59" id="D43-lR-VGj"/>
                             <constraint firstItem="ATp-Nc-7Wj" firstAttribute="top" secondItem="bnL-Ix-hU8" secondAttribute="top" constant="45" id="IKV-mC-NCF"/>
                             <constraint firstItem="ATp-Nc-7Wj" firstAttribute="centerX" secondItem="0li-2p-iae" secondAttribute="centerX" id="Oei-NB-Ui8"/>
-                            <constraint firstItem="bnL-Ix-hU8" firstAttribute="bottom" secondItem="UAX-Zd-aNd" secondAttribute="bottom" constant="31" id="Ptj-zP-PeT"/>
+                            <constraint firstItem="bnL-Ix-hU8" firstAttribute="bottom" secondItem="UAX-Zd-aNd" secondAttribute="bottom" constant="28" id="Ptj-zP-PeT"/>
                             <constraint firstItem="ATp-Nc-7Wj" firstAttribute="leading" secondItem="bnL-Ix-hU8" secondAttribute="leading" id="Qbw-YL-taQ"/>
                             <constraint firstItem="UAX-Zd-aNd" firstAttribute="top" secondItem="ATp-Nc-7Wj" secondAttribute="bottom" constant="6" id="RgQ-Pr-Tj3"/>
                             <constraint firstItem="UAX-Zd-aNd" firstAttribute="leading" secondItem="0li-2p-iae" secondAttribute="leadingMargin" id="Rk0-qv-Sxf"/>
@@ -368,7 +489,7 @@
         <!--Home View Controller-->
         <scene sceneID="3qq-g1-tWt">
             <objects>
-                <viewController id="gz4-35-q3V" customClass="HomeViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="liveCasesVC" id="gz4-35-q3V" customClass="HomeViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YGa-a6-nNO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -428,11 +549,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxT-yY-zcj">
-                                <rect key="frame" x="89.5" y="522" width="196" height="47"/>
+                                <rect key="frame" x="89.5" y="522" width="196" height="50"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="MkH-fG-Vkb"/>
-                                    <constraint firstAttribute="height" constant="47" id="OqW-ih-bNC"/>
+                                    <constraint firstAttribute="height" constant="50" id="OqW-ih-bNC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Check By Country">
@@ -465,7 +586,7 @@
                             <constraint firstItem="0Lo-6Y-gw9" firstAttribute="centerX" secondItem="YGa-a6-nNO" secondAttribute="centerX" id="9Mp-54-VGH"/>
                             <constraint firstItem="TlJ-Yg-DcL" firstAttribute="trailing" secondItem="XZA-J3-hYx" secondAttribute="trailing" constant="20" id="FM5-PT-0Hw"/>
                             <constraint firstItem="TiH-DM-0W3" firstAttribute="top" secondItem="TlJ-Yg-DcL" secondAttribute="top" constant="15" id="HYK-Ip-ddc"/>
-                            <constraint firstItem="TlJ-Yg-DcL" firstAttribute="bottom" secondItem="AxT-yY-zcj" secondAttribute="bottom" constant="49" id="IbU-QO-soB"/>
+                            <constraint firstItem="TlJ-Yg-DcL" firstAttribute="bottom" secondItem="AxT-yY-zcj" secondAttribute="bottom" constant="46" id="IbU-QO-soB"/>
                             <constraint firstItem="IOj-b8-kwg" firstAttribute="top" secondItem="dmh-la-Qah" secondAttribute="bottom" constant="11" id="Iyx-7Z-PCR"/>
                             <constraint firstItem="Jcr-40-eGm" firstAttribute="top" secondItem="0Lo-6Y-gw9" secondAttribute="bottom" constant="72" id="J0h-kF-t5r"/>
                             <constraint firstItem="Jcr-40-eGm" firstAttribute="leading" secondItem="TlJ-Yg-DcL" secondAttribute="leading" constant="20" id="Jbp-PA-Vdx"/>
@@ -853,9 +974,11 @@ Cg
     </scenes>
     <resources>
         <image name="checkmark.seal" catalog="system" width="128" height="122"/>
+        <image name="covid-19" width="207" height="149"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="notice" width="28" height="28"/>
         <image name="square.and.pencil" catalog="system" width="128" height="118"/>
     </resources>
 </document>

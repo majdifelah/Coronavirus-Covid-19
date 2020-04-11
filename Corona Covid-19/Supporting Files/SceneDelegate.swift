@@ -8,17 +8,42 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDelegate {
 
     var window: UIWindow?
-
+    let tabBarController = UITabBarController()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+//        guard let winScene = (scene as? UIWindowScene) else { return }
+//        window = UIWindow(windowScene: winScene)
+//        window?.rootViewController = ViewController()
+//        window?.makeKeyAndVisible()
     }
+    
+    func applicationLaunching(withVC: Int) {
+         
+         let main = UIStoryboard(name: "Main", bundle: nil)
+         
+         // Set up the Tab Bar Controller with five tabs
+         let homeVC = UINavigationController(rootViewController:main.instantiateViewController(withIdentifier: "liveCasesVC"))
+         let symptomsVC = UINavigationController(rootViewController:main.instantiateViewController(withIdentifier: "symptomsVC"))
+         let advicesVC = UINavigationController(rootViewController:main.instantiateViewController(withIdentifier: "advicesVC"))
+         let liveCheck = UINavigationController(rootViewController:main.instantiateViewController(withIdentifier: "liveCheck"))
+         
+         let testBookingVC = UINavigationController(rootViewController:main.instantiateViewController(withIdentifier:"testBookingVC"))
+         self.tabBarController.delegate = self
+
+         self.tabBarController.viewControllers = [homeVC, symptomsVC, advicesVC, liveCheck, testBookingVC]
+         self.window?.rootViewController = tabBarController
+         self.window?.makeKeyAndVisible()
+         
+         tabBarController.selectedIndex = withVC
+        
+     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
