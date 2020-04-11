@@ -32,6 +32,8 @@
 		9A40B7C7243CC3E00067F0AB /* AllCasesByCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7C6243CC3E00067F0AB /* AllCasesByCountry.swift */; };
 		9A40B7C9243CD7370067F0AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7C8243CD7360067F0AB /* HomeViewController.swift */; };
 		9A40B7CB243CD85B0067F0AB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7CA243CD85B0067F0AB /* HomeViewModel.swift */; };
+		9A70BCA0244148D300E7DBD3 /* LiveCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70BC9F244148D300E7DBD3 /* LiveCheckViewController.swift */; };
+		9A70BCA2244148F900E7DBD3 /* TestBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70BCA1244148F900E7DBD3 /* TestBookingViewController.swift */; };
 		F8DFF816388FB45A35D228BD /* Pods_Corona_Covid_19_Corona_Covid_19UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C2590932AAC74C06DC2779 /* Pods_Corona_Covid_19_Corona_Covid_19UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		9A40B7C6243CC3E00067F0AB /* AllCasesByCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCasesByCountry.swift; sourceTree = "<group>"; };
 		9A40B7C8243CD7360067F0AB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9A40B7CA243CD85B0067F0AB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9A70BC9F244148D300E7DBD3 /* LiveCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCheckViewController.swift; sourceTree = "<group>"; };
+		9A70BCA1244148F900E7DBD3 /* TestBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBookingViewController.swift; sourceTree = "<group>"; };
 		9E97446E94EFC81568BEB70C /* Pods-Corona Covid-19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Covid-19.release.xcconfig"; path = "Target Support Files/Pods-Corona Covid-19/Pods-Corona Covid-19.release.xcconfig"; sourceTree = "<group>"; };
 		AB76BCDADCC74DC8E1008EED /* Pods-Corona Covid-19-Corona Covid-19UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Covid-19-Corona Covid-19UITests.debug.xcconfig"; path = "Target Support Files/Pods-Corona Covid-19-Corona Covid-19UITests/Pods-Corona Covid-19-Corona Covid-19UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED74C1C1700D556BBA96566A /* Pods-Corona Covid-19Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Covid-19Tests.debug.xcconfig"; path = "Target Support Files/Pods-Corona Covid-19Tests/Pods-Corona Covid-19Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 		9A32DF50243F89D700D03BCE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9A70BC972441481C00E7DBD3 /* Test Booking */,
+				9A70BC96244147F700E7DBD3 /* Live Check */,
 				9A32DF4F243F89CE00D03BCE /* Advices */,
 				9A32DF4E243F89B000D03BCE /* Symptoms */,
 				9A33A6BC24325762001BD8E3 /* Search */,
@@ -315,6 +321,70 @@
 				9A33A6C524326802001BD8E3 /* SearchTableViewCell.swift */,
 			);
 			path = "Customs Cells";
+			sourceTree = "<group>";
+		};
+		9A70BC96244147F700E7DBD3 /* Live Check */ = {
+			isa = PBXGroup;
+			children = (
+				9A70BC9E244148B100E7DBD3 /* View Controllers */,
+				9A70BC9D244148A700E7DBD3 /* ViewModels */,
+				9A70BC9C2441489F00E7DBD3 /* Model */,
+			);
+			path = "Live Check";
+			sourceTree = "<group>";
+		};
+		9A70BC972441481C00E7DBD3 /* Test Booking */ = {
+			isa = PBXGroup;
+			children = (
+				9A70BC9A2441484800E7DBD3 /* Model */,
+				9A70BC992441484000E7DBD3 /* ViewModels */,
+				9A70BC982441483400E7DBD3 /* View Controllers */,
+			);
+			path = "Test Booking";
+			sourceTree = "<group>";
+		};
+		9A70BC982441483400E7DBD3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9A70BCA1244148F900E7DBD3 /* TestBookingViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9A70BC992441484000E7DBD3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9A70BC9A2441484800E7DBD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A70BC9C2441489F00E7DBD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A70BC9D244148A700E7DBD3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9A70BC9E244148B100E7DBD3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9A70BC9F244148D300E7DBD3 /* LiveCheckViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,6 +628,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A32DF48243D355300D03BCE /* Extensions.swift in Sources */,
+				9A70BCA2244148F900E7DBD3 /* TestBookingViewController.swift in Sources */,
+				9A70BCA0244148D300E7DBD3 /* LiveCheckViewController.swift in Sources */,
 				483932DF243F23DF002D1680 /* AdviceViewController.swift in Sources */,
 				9A40B7CB243CD85B0067F0AB /* HomeViewModel.swift in Sources */,
 				9A40B7C9243CD7370067F0AB /* HomeViewController.swift in Sources */,

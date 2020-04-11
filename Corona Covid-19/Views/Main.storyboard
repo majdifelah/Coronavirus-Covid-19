@@ -75,11 +75,13 @@
                         <segue destination="JS4-Uj-sEo" kind="relationship" relationship="viewControllers" id="jac-UX-mAb"/>
                         <segue destination="kY2-lK-vb2" kind="relationship" relationship="viewControllers" id="KR6-yt-YMv"/>
                         <segue destination="Xn3-c4-4gd" kind="relationship" relationship="viewControllers" id="rlx-Zj-H0J"/>
+                        <segue destination="TcG-K6-HD5" kind="relationship" relationship="viewControllers" id="WKt-rQ-E6C"/>
+                        <segue destination="U8z-lD-ieD" kind="relationship" relationship="viewControllers" id="b01-yF-IqO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCg-8I-dR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-303" y="469"/>
+            <point key="canvasLocation" x="-1615" y="2117"/>
         </scene>
         <!--Symptoms-->
         <scene sceneID="wck-YB-UlV">
@@ -119,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="1048" y="950"/>
         </scene>
-        <!--View Controller-->
+        <!--Live Check View Controller-->
         <scene sceneID="Jxe-6k-Po4">
             <objects>
-                <viewController id="bVK-yU-9wr" sceneMemberID="viewController">
+                <viewController id="bVK-yU-9wr" customClass="LiveCheckViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Kr-5m-YV9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,7 +135,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRS-kX-mgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2030" y="1728"/>
+            <point key="canvasLocation" x="2030" y="1723"/>
+        </scene>
+        <!--Test Booking View Controller-->
+        <scene sceneID="LpI-3Y-w4p">
+            <objects>
+                <viewController id="5zf-BD-gLF" customClass="TestBookingViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tBF-gE-IqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ylg-sh-Ib2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oZU-mW-kx6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUj-N4-ikc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2030" y="2462"/>
         </scene>
         <!--Masks-->
         <scene sceneID="6Nm-iV-smj">
@@ -792,7 +810,45 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dh9-we-RXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3200.8000000000002" y="1387.5562218890557"/>
+            <point key="canvasLocation" x="3201" y="1374"/>
+        </scene>
+        <!--Live Check-->
+        <scene sceneID="4iM-Za-PkI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TcG-K6-HD5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Live Check" id="XbX-vy-s4L"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W2d-jt-aXc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bVK-yU-9wr" kind="relationship" relationship="rootViewController" id="G04-HF-pVs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oj6-Vj-Obz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="1723"/>
+        </scene>
+        <!--Test Booking-->
+        <scene sceneID="EKm-yQ-PO9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U8z-lD-ieD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Test Booking" id="fZy-9K-JEc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ht4-jb-S2t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5zf-BD-gLF" kind="relationship" relationship="rootViewController" id="Crb-MQ-1oW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJh-zW-e8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="2462"/>
         </scene>
     </scenes>
     <resources>
