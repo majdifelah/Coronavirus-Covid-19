@@ -78,19 +78,19 @@ extension CoronaVirus: TargetType {
         case .historyByCountryandDate,.historyCasesByParticularCountry,.latestStatByCountry:
             return .requestCompositeData(bodyData: sampleData, urlParameters: parameters!)
             
-        default:
-            if let params = self.parameters {
-                var data = [MultipartFormData]()
-                for (key, value) in params {
-                    if let str = value as? String {
-                        let v = str.data(using: .utf8)!
-                        data.append(MultipartFormData(provider: .data(v), name: key))
-                    }
-                }
-                return .uploadCompositeMultipart(data, urlParameters: [:])
-            } else {
-                return .requestPlain
-            }
+//        default:
+//            if let params = self.parameters {
+//                var data = [MultipartFormData]()
+//                for (key, value) in params {
+//                    if let str = value as? String {
+//                        let v = str.data(using: .utf8)!
+//                        data.append(MultipartFormData(provider: .data(v), name: key))
+//                    }
+//                }
+//                return .uploadCompositeMultipart(data, urlParameters: [:])
+//            } else {
+//                return .requestPlain
+//            }
         }
     }
     
