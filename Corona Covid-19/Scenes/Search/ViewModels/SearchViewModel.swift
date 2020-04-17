@@ -9,27 +9,26 @@
 
 import Foundation
 
-struct SearchListViewModel {
-    let countryCovidStats: [LatestStatByCountry]
-}
-
-extension SearchListViewModel {
-    
-    var numberOfSections: Int {
-        return 1
-    }
-    
-    func numberOfRowsInSection(_ section: Int) -> Int {
-        return self.countryCovidStats.count
-    }
-    
-    func searchStatAtIndex(_ index: Int) -> SearchViewModel {
-        let coutryCovidStat = self.countryCovidStats[index]
-        return SearchViewModel(coutryCovidStat)
-    }
-    
-}
-
+//struct SearchListViewModel {
+//    let countryCovidStats: [LatestStatByCountry]
+//}
+//
+//extension SearchListViewModel {
+//    
+//    var numberOfSections: Int {
+//        return 1
+//    }
+//    
+//    func numberOfRowsInSection(_ section: Int) -> Int {
+//        return self.countryCovidStats.count
+//    }
+//    
+//    func searchStatAtIndex(_ index: Int) -> SearchViewModel {
+//        let coutryCovidStat = self.countryCovidStats[index]
+//        return SearchViewModel(coutryCovidStat)
+//    }
+//    
+//}
 
 struct SearchViewModel {
     private let countryCovidStat: LatestStatByCountry
@@ -44,27 +43,38 @@ extension SearchViewModel {
 extension SearchViewModel {
     
     var totalCases: String {
-        return self.countryCovidStat.totalCases
+        return trimmeResult(string: self.countryCovidStat.totalCases)
     }
     
     var totalDeaths: String {
-        return self.countryCovidStat.totalDeaths
+        return trimmeResult(string: self.countryCovidStat.totalDeaths)
     }
     
     var totalRecovered: String {
-        return self.countryCovidStat.totalRecovered
+        return trimmeResult(string: self.countryCovidStat.totalRecovered)
     }
     
     var newCases: String {
-        return self.countryCovidStat.newCases
+            return trimmeResult(string: self.countryCovidStat.newCases)
     }
     
     var newDeaths: String {
-        return self.countryCovidStat.newDeaths
+        return trimmeResult(string: self.countryCovidStat.newDeaths)
+    }
+    var activeCases: String {
+        return trimmeResult(string: self.countryCovidStat.activeCases)
     }
     
-    var statisticTakenAt: String {
-        return self.countryCovidStat.statisticTakenAt ?? "0"
+    var seriousCritical: String {
+        return trimmeResult(string: self.countryCovidStat.seriousCritical ?? "0")
     }
 }
 
+extension SearchViewModel {
+    func trimmeResult(string: String) -> String {
+        
+        if string.count == 0 {return "0"} else {
+            return string
+        }
+    }
+}

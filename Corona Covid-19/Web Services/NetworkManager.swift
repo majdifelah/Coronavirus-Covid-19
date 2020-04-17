@@ -17,3 +17,9 @@ protocol Networkable {
     func createPosth(post: String, completion: @escaping (CoronaVirus?, Error?) -> ())
 }
 
+class NetworkManager {
+
+var provider = MoyaProvider<CoronaVirus>(plugins: [NetworkLoggerPlugin(verbose: true)])
+
+}
+

@@ -100,7 +100,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notice" translatesAutoresizingMaskIntoConstraints="NO" id="5jK-Cc-jyF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Notice" translatesAutoresizingMaskIntoConstraints="NO" id="5jK-Cc-jyF">
                                 <rect key="frame" x="10" y="83" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="bti-XY-Nc0"/>
@@ -398,10 +398,16 @@ There is currently no vaccine or cure for COVID-19 but researchers are working h
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kj0-8U-QXx">
                                 <rect key="frame" x="31.5" y="517" width="312" height="100"/>
                                 <state key="normal" image="Support"/>
+                                <connections>
+                                    <segue destination="gEl-Su-DOc" kind="show" id="hHl-y2-hmO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0C-Vb-Qaa">
                                 <rect key="frame" x="31.5" y="402" width="312" height="100"/>
                                 <state key="normal" image="importantNumber"/>
+                                <connections>
+                                    <segue destination="bdp-gG-dce" kind="push" id="rDG-Nq-5Og"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
@@ -671,6 +677,62 @@ There is currently no vaccine or cure for COVID-19 but researchers are working h
             </objects>
             <point key="canvasLocation" x="2029.5999999999999" y="3250.5247376311845"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="JgK-4P-eB3">
+            <objects>
+                <viewController id="gEl-Su-DOc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBh-r5-K9r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat with NHS coming soon..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UD-JU-0Ps">
+                                <rect key="frame" x="73" y="313" width="229" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5UD-JU-0Ps" firstAttribute="centerX" secondItem="LBh-r5-K9r" secondAttribute="centerX" id="2bS-BW-Puq"/>
+                            <constraint firstItem="5UD-JU-0Ps" firstAttribute="centerY" secondItem="LBh-r5-K9r" secondAttribute="centerY" id="9Ef-Qy-vuI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8ea-ZX-cvS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bA3-zP-Cyo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCo-xU-Wnf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2886" y="3251"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AuQ-vt-V8I">
+            <objects>
+                <viewController id="bdp-gG-dce" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vpv-tp-7wv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="important number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgz-Qb-7Wd">
+                                <rect key="frame" x="118.5" y="313" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tgz-Qb-7Wd" firstAttribute="centerY" secondItem="vpv-tp-7wv" secondAttribute="centerY" id="FOi-Dg-j00"/>
+                            <constraint firstItem="tgz-Qb-7Wd" firstAttribute="centerX" secondItem="vpv-tp-7wv" secondAttribute="centerX" id="cWB-Hb-N9r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7gj-qM-Jeb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xwj-R7-1zW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4qW-XY-AXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3769" y="3251"/>
+        </scene>
         <!--Advices-->
         <scene sceneID="6Nm-iV-smj">
             <objects>
@@ -707,10 +769,6 @@ There is currently no vaccine or cure for COVID-19 but researchers are working h
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Th3-Z6-OIf">
                                 <rect key="frame" x="0.0" y="44" width="375" height="488"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="488" id="CI0-qK-vfq"/>
-                                    <constraint firstAttribute="width" constant="375" id="Y3D-KY-ltG"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -723,8 +781,12 @@ There is currently no vaccine or cure for COVID-19 but researchers are working h
                             <constraint firstItem="bnL-Ix-hU8" firstAttribute="bottom" secondItem="UAX-Zd-aNd" secondAttribute="bottom" constant="28" id="Ptj-zP-PeT"/>
                             <constraint firstItem="Th3-Z6-OIf" firstAttribute="top" secondItem="bnL-Ix-hU8" secondAttribute="top" id="RQg-fo-9Fc"/>
                             <constraint firstItem="UAX-Zd-aNd" firstAttribute="leading" secondItem="0li-2p-iae" secondAttribute="leadingMargin" id="Rk0-qv-Sxf"/>
+                            <constraint firstItem="Th3-Z6-OIf" firstAttribute="top" secondItem="bnL-Ix-hU8" secondAttribute="top" id="Y7L-yO-EDA"/>
                             <constraint firstItem="UAX-Zd-aNd" firstAttribute="firstBaseline" secondItem="6Eu-ke-409" secondAttribute="baseline" id="Z0h-6O-OEZ"/>
+                            <constraint firstItem="Th3-Z6-OIf" firstAttribute="leading" secondItem="bnL-Ix-hU8" secondAttribute="leading" id="aQ8-wf-mhk"/>
                             <constraint firstItem="UAX-Zd-aNd" firstAttribute="top" secondItem="6Eu-ke-409" secondAttribute="top" id="jIC-ct-KSW"/>
+                            <constraint firstItem="UAX-Zd-aNd" firstAttribute="top" secondItem="Th3-Z6-OIf" secondAttribute="bottom" constant="8" id="nF5-rh-bBY"/>
+                            <constraint firstItem="Th3-Z6-OIf" firstAttribute="trailing" secondItem="bnL-Ix-hU8" secondAttribute="trailing" id="wgb-rd-gXS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bnL-Ix-hU8"/>
                     </view>
@@ -747,75 +809,6 @@ There is currently no vaccine or cure for COVID-19 but researchers are working h
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Bj-df-AAE">
-                                <rect key="frame" x="0.0" y="100" width="375" height="168"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="168" id="VJl-K3-p32"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchID" rowHeight="108" id="ebj-NK-hhZ" customClass="SearchTableViewCell" customModule="Corona_Covid_19" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="108"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ebj-NK-hhZ" id="mXR-3l-px3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-Mm-ytO">
-                                                    <rect key="frame" x="15" y="11" width="85" height="83"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="85" id="kFR-gY-RfD"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkO-Py-FBY">
-                                                    <rect key="frame" x="108" y="40" width="544" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3w-es-pYF">
-                                                    <rect key="frame" x="108" y="69" width="544" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0I2-Y4-Z9h">
-                                                    <rect key="frame" x="108" y="11" width="544" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="544" id="PWT-ic-Q0Y"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="0I2-Y4-Z9h" firstAttribute="trailing" secondItem="dkO-Py-FBY" secondAttribute="trailing" id="0XF-9I-tiO"/>
-                                                <constraint firstItem="0I2-Y4-Z9h" firstAttribute="leading" secondItem="3Bw-Mm-ytO" secondAttribute="trailing" constant="8" id="D40-AR-mn8"/>
-                                                <constraint firstItem="0I2-Y4-Z9h" firstAttribute="leading" secondItem="dkO-Py-FBY" secondAttribute="leading" id="OVM-vF-XVL"/>
-                                                <constraint firstItem="3Bw-Mm-ytO" firstAttribute="top" secondItem="mXR-3l-px3" secondAttribute="topMargin" id="Trp-s9-dzC"/>
-                                                <constraint firstItem="3Bw-Mm-ytO" firstAttribute="top" secondItem="0I2-Y4-Z9h" secondAttribute="top" id="WG4-96-dGb"/>
-                                                <constraint firstItem="d3w-es-pYF" firstAttribute="top" secondItem="dkO-Py-FBY" secondAttribute="bottom" constant="8" id="XoD-a1-4TM"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="3Bw-Mm-ytO" secondAttribute="bottom" constant="3" id="fRS-St-Tqb"/>
-                                                <constraint firstItem="dkO-Py-FBY" firstAttribute="leading" secondItem="d3w-es-pYF" secondAttribute="leading" id="gxs-1A-PsF"/>
-                                                <constraint firstItem="dkO-Py-FBY" firstAttribute="top" secondItem="0I2-Y4-Z9h" secondAttribute="bottom" constant="8" id="hLt-Lu-h7k"/>
-                                                <constraint firstItem="dkO-Py-FBY" firstAttribute="trailing" secondItem="d3w-es-pYF" secondAttribute="trailing" id="t7p-A2-Mm9"/>
-                                                <constraint firstItem="3Bw-Mm-ytO" firstAttribute="leading" secondItem="mXR-3l-px3" secondAttribute="leadingMargin" id="wrh-MR-Nhf"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="confirmedCasesLabel" destination="0I2-Y4-Z9h" id="QJq-Bd-Fge"/>
-                                            <outlet property="countryImage" destination="3Bw-Mm-ytO" id="TvR-li-Wdd"/>
-                                            <outlet property="deathsLabel" destination="dkO-Py-FBY" id="FOs-7V-99y"/>
-                                            <outlet property="recoveredCasesLabel" destination="d3w-es-pYF" id="gRA-ZA-Bba"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="gQC-sZ-YBo" id="Ylc-Yq-Dxk"/>
-                                    <outlet property="delegate" destination="gQC-sZ-YBo" id="GON-xF-eCR"/>
-                                </connections>
-                            </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Ngu-Aq-KUM">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -831,27 +824,134 @@ There is currently no vaccine or cure for COVID-19 but researchers are working h
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f87-6t-9Qj" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="327" width="343" height="552"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-Mm-ytO">
+                                <rect key="frame" x="10" y="93.5" width="85" height="81.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="FP8-T0-W2P"/>
+                                    <constraint firstAttribute="height" constant="83" id="ZRZ-T8-8hS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkO-Py-FBY">
+                                <rect key="frame" x="105" y="124" width="260" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3w-es-pYF">
+                                <rect key="frame" x="105" y="155" width="260" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0I2-Y4-Z9h">
+                                <rect key="frame" x="105" y="93" width="260" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.94901960784313721" green="0.76470588235294112" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGK-Wl-VxJ">
+                                <rect key="frame" x="10" y="186" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active Cases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIR-Zd-Nma">
+                                <rect key="frame" x="250" y="186" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Deaths" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxi-DU-kPV">
+                                <rect key="frame" x="10" y="283" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serious Critical" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C60-Kc-9ZB">
+                                <rect key="frame" x="250" y="282" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROx-bR-d1F">
+                                <rect key="frame" x="10" y="217" width="86" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="8fa-Ev-UcI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYZ-U9-RmC">
+                                <rect key="frame" x="250" y="217" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajb-ps-kmU">
+                                <rect key="frame" x="10" y="312" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-wr-lgj">
+                                <rect key="frame" x="250" y="311" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76R-7X-8YN" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="10" y="341" width="355" height="257"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="f87-6t-9Qj" firstAttribute="leading" secondItem="KX0-0z-9Vz" secondAttribute="leadingMargin" id="4Y2-4L-e3O"/>
+                            <constraint firstItem="76R-7X-8YN" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" constant="10" id="0JG-ib-daA"/>
+                            <constraint firstItem="gYZ-U9-RmC" firstAttribute="centerY" secondItem="ROx-bR-d1F" secondAttribute="centerY" id="0RP-v7-t5Y"/>
+                            <constraint firstItem="3Bw-Mm-ytO" firstAttribute="top" secondItem="Ngu-Aq-KUM" secondAttribute="bottom" constant="5" id="13n-lS-tju"/>
+                            <constraint firstItem="C60-Kc-9ZB" firstAttribute="top" secondItem="gYZ-U9-RmC" secondAttribute="bottom" constant="44" id="1QH-W4-GVI"/>
+                            <constraint firstItem="pIR-Zd-Nma" firstAttribute="top" secondItem="DGK-Wl-VxJ" secondAttribute="top" id="3M6-ie-a6S"/>
+                            <constraint firstItem="DKD-tS-dET" firstAttribute="trailing" secondItem="0I2-Y4-Z9h" secondAttribute="trailing" constant="10" id="7Ja-fb-2ns"/>
+                            <constraint firstItem="0I2-Y4-Z9h" firstAttribute="top" secondItem="3Bw-Mm-ytO" secondAttribute="top" id="7mR-lt-dAQ"/>
                             <constraint firstItem="Ngu-Aq-KUM" firstAttribute="top" secondItem="DKD-tS-dET" secondAttribute="top" id="9fV-Qu-kna"/>
                             <constraint firstItem="MP9-J0-zWM" firstAttribute="top" secondItem="DKD-tS-dET" secondAttribute="top" constant="5" id="AyL-Ep-gGI"/>
-                            <constraint firstItem="f87-6t-9Qj" firstAttribute="top" secondItem="3Bj-df-AAE" secondAttribute="bottom" constant="59" id="Kk5-mJ-001"/>
-                            <constraint firstItem="Ngu-Aq-KUM" firstAttribute="leading" secondItem="3Bj-df-AAE" secondAttribute="leading" id="PiC-Qg-Z4c"/>
-                            <constraint firstItem="Ngu-Aq-KUM" firstAttribute="trailing" secondItem="3Bj-df-AAE" secondAttribute="trailing" id="SKF-Xd-FjC"/>
+                            <constraint firstItem="ujZ-wr-lgj" firstAttribute="leading" secondItem="C60-Kc-9ZB" secondAttribute="leading" id="B6u-nm-JZg"/>
+                            <constraint firstItem="3Bw-Mm-ytO" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" constant="10" id="E1x-9t-lw5"/>
+                            <constraint firstItem="DKD-tS-dET" firstAttribute="trailing" secondItem="C60-Kc-9ZB" secondAttribute="trailing" constant="10" id="HCa-ED-T8E"/>
+                            <constraint firstItem="ajb-ps-kmU" firstAttribute="leading" secondItem="Fxi-DU-kPV" secondAttribute="leading" id="QQX-or-IDJ"/>
+                            <constraint firstItem="Ngu-Aq-KUM" firstAttribute="trailing" secondItem="DKD-tS-dET" secondAttribute="trailing" id="Rth-ui-dfu"/>
+                            <constraint firstItem="ajb-ps-kmU" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" constant="10" id="RzE-Ko-dwO"/>
                             <constraint firstItem="MP9-J0-zWM" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" constant="42" id="VUV-NJ-SZj"/>
                             <constraint firstItem="MP9-J0-zWM" firstAttribute="trailing" secondItem="KX0-0z-9Vz" secondAttribute="trailingMargin" id="ViJ-E5-fBs"/>
-                            <constraint firstAttribute="bottom" secondItem="f87-6t-9Qj" secondAttribute="bottom" constant="-212" id="Y43-PP-mWY"/>
-                            <constraint firstItem="3Bj-df-AAE" firstAttribute="centerX" secondItem="f87-6t-9Qj" secondAttribute="centerX" id="Z9F-eP-foY"/>
-                            <constraint firstItem="3Bj-df-AAE" firstAttribute="top" secondItem="Ngu-Aq-KUM" secondAttribute="bottom" constant="12" id="aJm-aw-g2c"/>
+                            <constraint firstItem="Fxi-DU-kPV" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" constant="10" id="WBw-QG-SSp"/>
+                            <constraint firstItem="dkO-Py-FBY" firstAttribute="centerY" secondItem="3Bw-Mm-ytO" secondAttribute="centerY" id="X5Y-g6-fdj"/>
+                            <constraint firstItem="Ngu-Aq-KUM" firstAttribute="top" secondItem="DKD-tS-dET" secondAttribute="top" id="XO6-5a-8aS"/>
+                            <constraint firstItem="DKD-tS-dET" firstAttribute="trailing" secondItem="pIR-Zd-Nma" secondAttribute="trailing" constant="26" id="Xhf-Ia-AVe"/>
+                            <constraint firstItem="DGK-Wl-VxJ" firstAttribute="top" secondItem="3Bw-Mm-ytO" secondAttribute="bottom" constant="10" id="Yeq-jW-eHS"/>
+                            <constraint firstItem="d3w-es-pYF" firstAttribute="leading" secondItem="0I2-Y4-Z9h" secondAttribute="leading" id="ZO9-lz-9pK"/>
+                            <constraint firstItem="ajb-ps-kmU" firstAttribute="trailing" secondItem="Fxi-DU-kPV" secondAttribute="trailing" id="aJf-bJ-P94"/>
+                            <constraint firstItem="0I2-Y4-Z9h" firstAttribute="leading" secondItem="3Bw-Mm-ytO" secondAttribute="trailing" constant="10" id="aXQ-Lt-qRC"/>
                             <constraint firstItem="Ngu-Aq-KUM" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" id="bt9-mV-B0s"/>
                             <constraint firstItem="Ngu-Aq-KUM" firstAttribute="centerY" secondItem="MP9-J0-zWM" secondAttribute="centerY" id="czG-aq-oeb"/>
-                            <constraint firstItem="MP9-J0-zWM" firstAttribute="trailing" secondItem="f87-6t-9Qj" secondAttribute="trailing" id="hdD-RZ-ckd"/>
+                            <constraint firstItem="gYZ-U9-RmC" firstAttribute="trailing" secondItem="pIR-Zd-Nma" secondAttribute="trailing" id="fdV-HV-mJh"/>
+                            <constraint firstItem="gYZ-U9-RmC" firstAttribute="leading" secondItem="pIR-Zd-Nma" secondAttribute="leading" id="fqJ-du-3NJ"/>
+                            <constraint firstItem="DKD-tS-dET" firstAttribute="bottom" secondItem="76R-7X-8YN" secondAttribute="bottom" constant="20" id="hyl-rJ-HKp"/>
+                            <constraint firstItem="Fxi-DU-kPV" firstAttribute="top" secondItem="ROx-bR-d1F" secondAttribute="bottom" constant="45" id="jYD-TB-sSW"/>
+                            <constraint firstItem="ujZ-wr-lgj" firstAttribute="top" secondItem="C60-Kc-9ZB" secondAttribute="bottom" constant="8" id="jiF-Tm-meP"/>
+                            <constraint firstItem="gYZ-U9-RmC" firstAttribute="top" secondItem="pIR-Zd-Nma" secondAttribute="bottom" constant="10" id="jzS-QU-HEe"/>
+                            <constraint firstItem="dkO-Py-FBY" firstAttribute="leading" secondItem="0I2-Y4-Z9h" secondAttribute="leading" id="kJQ-Gn-H5K"/>
+                            <constraint firstItem="dkO-Py-FBY" firstAttribute="trailing" secondItem="0I2-Y4-Z9h" secondAttribute="trailing" id="mjX-im-hvD"/>
+                            <constraint firstItem="ROx-bR-d1F" firstAttribute="top" secondItem="DGK-Wl-VxJ" secondAttribute="bottom" constant="10" id="n0f-qK-nOh"/>
+                            <constraint firstItem="ROx-bR-d1F" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" constant="10" id="nPn-yQ-h5i"/>
+                            <constraint firstItem="Ngu-Aq-KUM" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" id="o30-jH-GYI"/>
+                            <constraint firstItem="DGK-Wl-VxJ" firstAttribute="leading" secondItem="DKD-tS-dET" secondAttribute="leading" constant="10" id="qMh-Iw-I1c"/>
+                            <constraint firstItem="76R-7X-8YN" firstAttribute="top" secondItem="ajb-ps-kmU" secondAttribute="bottom" constant="8" id="qlj-Mn-uBU"/>
+                            <constraint firstItem="ujZ-wr-lgj" firstAttribute="trailing" secondItem="C60-Kc-9ZB" secondAttribute="trailing" id="ueF-Tu-wit"/>
+                            <constraint firstItem="d3w-es-pYF" firstAttribute="bottom" secondItem="3Bw-Mm-ytO" secondAttribute="bottom" id="vw2-xy-vfx"/>
+                            <constraint firstItem="d3w-es-pYF" firstAttribute="trailing" secondItem="0I2-Y4-Z9h" secondAttribute="trailing" id="x78-w8-2tR"/>
+                            <constraint firstItem="ajb-ps-kmU" firstAttribute="top" secondItem="Fxi-DU-kPV" secondAttribute="bottom" constant="8" id="xbf-uD-goA"/>
+                            <constraint firstItem="DKD-tS-dET" firstAttribute="trailing" secondItem="76R-7X-8YN" secondAttribute="trailing" constant="10" id="y0s-kC-mn5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DKD-tS-dET"/>
                     </view>
@@ -863,15 +963,21 @@ There is currently no vaccine or cure for COVID-19 but researchers are working h
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activeCases" destination="gYZ-U9-RmC" id="7fF-MU-YYP"/>
+                        <outlet property="confirmedCases" destination="0I2-Y4-Z9h" id="NYg-Au-5pa"/>
                         <outlet property="countriesTextField" destination="MP9-J0-zWM" id="Jrg-oN-a1K"/>
                         <outlet property="countrySearchBar" destination="Ngu-Aq-KUM" id="WFS-By-emW"/>
-                        <outlet property="pieChartView" destination="f87-6t-9Qj" id="qll-C0-88a"/>
-                        <outlet property="tableView" destination="3Bj-df-AAE" id="ESy-p2-lG5"/>
+                        <outlet property="deaths" destination="dkO-Py-FBY" id="Rr8-T4-Phm"/>
+                        <outlet property="newCases" destination="ROx-bR-d1F" id="ccM-KV-Joc"/>
+                        <outlet property="newDeaths" destination="ajb-ps-kmU" id="6GN-AT-6Qq"/>
+                        <outlet property="pieChartView" destination="76R-7X-8YN" id="AmF-Vp-bUA"/>
+                        <outlet property="recovered" destination="d3w-es-pYF" id="nng-Dm-49v"/>
+                        <outlet property="seriousCritical" destination="ujZ-wr-lgj" id="vx7-wS-O16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jn1-ZW-jBu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3734" y="-1385"/>
+            <point key="canvasLocation" x="3201" y="-448"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="3qq-g1-tWt">
@@ -948,7 +1054,7 @@ There is currently no vaccine or cure for COVID-19 but researchers are working h
                                     <color key="titleShadowColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BQB-qn-bJ4" kind="show" id="oBt-Ln-hyi"/>
+                                    <segue destination="gQC-sZ-YBo" kind="push" id="Yai-gh-NnH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6h9-IW-Xgx">
@@ -1011,164 +1117,6 @@ There is currently no vaccine or cure for COVID-19 but researchers are working h
             </objects>
             <point key="canvasLocation" x="2029.5999999999999" y="-447.04433497536945"/>
         </scene>
-        <!--Live Cases-->
-        <scene sceneID="avZ-yR-bPX">
-            <objects>
-                <navigationController title="Live Cases" automaticallyAdjustsScrollViewInsets="NO" id="ZMS-a5-mqC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Live Cases" image="doc.plaintext" catalog="system" id="shf-Ps-NgJ"/>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Nza-dA-PT9"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rvl-jp-6uG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gQC-sZ-YBo" kind="relationship" relationship="rootViewController" id="Ngk-e1-pYv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fbP-Xn-cw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2887" y="-1192"/>
-        </scene>
-        <!--Search View Controller-->
-        <scene sceneID="Bi5-n7-wbr">
-            <objects>
-                <viewController id="BQB-qn-bJ4" customClass="SearchViewController" customModule="Corona_Covid_19" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dVL-qW-jel">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GMX-F9-BOg">
-                                <rect key="frame" x="0.0" y="88" width="375" height="168"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="168" id="YZz-rt-x9v"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchID" rowHeight="108" id="8jS-0E-R6V" customClass="SearchTableViewCell" customModule="Corona_Covid_19" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="108"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8jS-0E-R6V" id="a08-16-SQf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vKU-Nl-olB" customClass="SDAnimatedImageView">
-                                                    <rect key="frame" x="15" y="11.5" width="85" height="81.5"/>
-                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="83" id="R5F-Nt-LSy"/>
-                                                        <constraint firstAttribute="width" constant="85" id="vv5-SQ-C5K"/>
-                                                    </constraints>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIB-kJ-bKW">
-                                                    <rect key="frame" x="108" y="40" width="252" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STS-au-XoH">
-                                                    <rect key="frame" x="108" y="69" width="252" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKM-gV-6KZ">
-                                                    <rect key="frame" x="108" y="11" width="252" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.94853371351503479" green="0.7636712417666216" blue="0.20692532811265843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="NKM-gV-6KZ" firstAttribute="leading" secondItem="vKU-Nl-olB" secondAttribute="trailing" constant="8" id="4gx-tW-qUq"/>
-                                                <constraint firstItem="NKM-gV-6KZ" firstAttribute="top" secondItem="a08-16-SQf" secondAttribute="topMargin" id="8bT-1B-Otr"/>
-                                                <constraint firstItem="hIB-kJ-bKW" firstAttribute="trailing" secondItem="a08-16-SQf" secondAttribute="trailingMargin" id="BHO-e1-no3"/>
-                                                <constraint firstItem="NKM-gV-6KZ" firstAttribute="trailing" secondItem="a08-16-SQf" secondAttribute="trailingMargin" id="FaA-YD-Jrf"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="vKU-Nl-olB" secondAttribute="bottom" constant="3" id="J90-bm-nHN"/>
-                                                <constraint firstItem="hIB-kJ-bKW" firstAttribute="top" secondItem="NKM-gV-6KZ" secondAttribute="bottom" constant="8" id="Pg8-H4-N6e"/>
-                                                <constraint firstItem="STS-au-XoH" firstAttribute="leading" secondItem="vKU-Nl-olB" secondAttribute="trailing" constant="8" id="PjN-If-fjL"/>
-                                                <constraint firstItem="STS-au-XoH" firstAttribute="trailing" secondItem="a08-16-SQf" secondAttribute="trailingMargin" id="VdH-Pi-q7V"/>
-                                                <constraint firstItem="STS-au-XoH" firstAttribute="top" secondItem="hIB-kJ-bKW" secondAttribute="bottom" constant="8" id="XbL-WI-2Go"/>
-                                                <constraint firstItem="vKU-Nl-olB" firstAttribute="top" secondItem="a08-16-SQf" secondAttribute="topMargin" id="a2E-MA-vtQ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="STS-au-XoH" secondAttribute="bottom" constant="7" id="hpr-Ep-UqW"/>
-                                                <constraint firstItem="vKU-Nl-olB" firstAttribute="leading" secondItem="a08-16-SQf" secondAttribute="leadingMargin" id="jh4-HK-DnK"/>
-                                                <constraint firstItem="hIB-kJ-bKW" firstAttribute="leading" secondItem="vKU-Nl-olB" secondAttribute="trailing" constant="8" id="mZu-Rf-iBY"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="confirmedCasesLabel" destination="NKM-gV-6KZ" id="2Rq-Sk-Hae"/>
-                                            <outlet property="countryImage" destination="vKU-Nl-olB" id="qdP-si-3TW"/>
-                                            <outlet property="deathsLabel" destination="hIB-kJ-bKW" id="iVv-G7-WjA"/>
-                                            <outlet property="recoveredCasesLabel" destination="STS-au-XoH" id="M1c-zF-d6M"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BQB-qn-bJ4" id="ZlM-qa-fmd"/>
-                                    <outlet property="delegate" destination="BQB-qn-bJ4" id="FJQ-8I-BwM"/>
-                                </connections>
-                            </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lVb-9a-7V6">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="m0q-tZ-0kT"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BQB-qn-bJ4" id="aY6-sw-JSr"/>
-                                </connections>
-                            </searchBar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose your country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3U-Hk-Rq6">
-                                <rect key="frame" x="42" y="49" width="313" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IF0-ln-Uye" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="256" width="375" height="362"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="vlm-Lf-Tfz" firstAttribute="bottom" secondItem="IF0-ln-Uye" secondAttribute="bottom" id="047-Z9-PSt"/>
-                            <constraint firstItem="vlm-Lf-Tfz" firstAttribute="trailing" secondItem="r3U-Hk-Rq6" secondAttribute="trailing" constant="20" id="FLq-I2-rJp"/>
-                            <constraint firstItem="vlm-Lf-Tfz" firstAttribute="trailing" secondItem="IF0-ln-Uye" secondAttribute="trailing" id="H8z-Mv-V7p"/>
-                            <constraint firstItem="GMX-F9-BOg" firstAttribute="leading" secondItem="vlm-Lf-Tfz" secondAttribute="leading" id="O5q-Ha-g5l"/>
-                            <constraint firstItem="GMX-F9-BOg" firstAttribute="leading" secondItem="vlm-Lf-Tfz" secondAttribute="leading" id="UvC-2k-eW1"/>
-                            <constraint firstItem="lVb-9a-7V6" firstAttribute="leading" secondItem="GMX-F9-BOg" secondAttribute="leading" id="VwR-bY-img"/>
-                            <constraint firstItem="lVb-9a-7V6" firstAttribute="top" secondItem="vlm-Lf-Tfz" secondAttribute="top" id="XY4-SB-dNY"/>
-                            <constraint firstItem="GMX-F9-BOg" firstAttribute="top" secondItem="lVb-9a-7V6" secondAttribute="bottom" id="a9s-g8-BfO"/>
-                            <constraint firstItem="GMX-F9-BOg" firstAttribute="trailing" secondItem="vlm-Lf-Tfz" secondAttribute="trailing" id="bvO-ko-axA"/>
-                            <constraint firstItem="IF0-ln-Uye" firstAttribute="leading" secondItem="vlm-Lf-Tfz" secondAttribute="leading" id="hxP-cT-dj5"/>
-                            <constraint firstItem="IF0-ln-Uye" firstAttribute="top" secondItem="GMX-F9-BOg" secondAttribute="bottom" id="lLR-EN-1mZ"/>
-                            <constraint firstItem="r3U-Hk-Rq6" firstAttribute="top" secondItem="vlm-Lf-Tfz" secondAttribute="top" constant="5" id="tdd-CN-2HF"/>
-                            <constraint firstItem="GMX-F9-BOg" firstAttribute="top" secondItem="lVb-9a-7V6" secondAttribute="bottom" id="uBJ-Zy-iuC"/>
-                            <constraint firstItem="lVb-9a-7V6" firstAttribute="trailing" secondItem="GMX-F9-BOg" secondAttribute="trailing" id="ufE-sL-ixC"/>
-                            <constraint firstItem="GMX-F9-BOg" firstAttribute="trailing" secondItem="vlm-Lf-Tfz" secondAttribute="trailing" id="vyS-Jh-1GX"/>
-                            <constraint firstItem="r3U-Hk-Rq6" firstAttribute="leading" secondItem="vlm-Lf-Tfz" secondAttribute="leading" constant="42" id="yGK-PD-hGo"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="vlm-Lf-Tfz"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="oyU-A2-nk6">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="refresh" id="AyA-ST-rgr">
-                            <connections>
-                                <action selector="reloadButtonAction:" destination="BQB-qn-bJ4" id="7Hb-Yv-dQc"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="countriesTextField" destination="r3U-Hk-Rq6" id="NPF-ya-lV3"/>
-                        <outlet property="countrySearchBar" destination="lVb-9a-7V6" id="rUm-Sp-n9F"/>
-                        <outlet property="pieChartView" destination="IF0-ln-Uye" id="gxB-bW-66W"/>
-                        <outlet property="tableView" destination="GMX-F9-BOg" id="hWJ-t5-Cwy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XGS-hC-5le" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3081" y="-447"/>
-        </scene>
         <!--Advice-->
         <scene sceneID="yd7-Sa-2qr">
             <objects>
@@ -1185,12 +1133,12 @@ There is currently no vaccine or cure for COVID-19 but researchers are working h
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <mutableString key="content">1. Stay at home. 
+                                                <string key="content">1. Stay at home. 
 2. Only go outside for food, health reasons or work (but only if you cannot work from home) 
 3. If you go out, stay 2 metres (6ft) away from other people at all times
  4. Wash your hands as soon as you get home
  5. Do not meet others, even friends or family.
-</mutableString>
+</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.025281567258883197" green="0.025281567258883197" blue="0.025281567258883197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="20" name="Helvetica-Bold"/>
@@ -1400,6 +1348,9 @@ Cg
                                     <constraint firstAttribute="width" constant="14" id="plw-D7-B3F"/>
                                 </constraints>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="searchLocationPlusButton:" destination="59j-d6-0RJ" eventType="touchUpInside" id="01x-bO-hBQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4m-yo-F2B">
                                 <rect key="frame" x="147.5" y="566" width="80" height="81"/>
@@ -1428,6 +1379,9 @@ Cg
                         <viewLayoutGuide key="safeArea" id="JxF-3c-iS8"/>
                     </view>
                     <navigationItem key="navigationItem" id="u9E-lZ-CAF"/>
+                    <connections>
+                        <outlet property="searchLocationTextField" destination="whT-XX-ic4" id="pVF-cu-FvD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ud-88-Sal" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1478,6 +1432,9 @@ Cg
                                     <constraint firstAttribute="height" constant="22" id="oN8-Rw-B80"/>
                                 </constraints>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="agePlusButton:" destination="yAY-o3-VJI" eventType="touchUpInside" id="X16-Lm-Lcs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-bs-y4m">
                                 <rect key="frame" x="147.5" y="566" width="80" height="81"/>
@@ -1507,6 +1464,9 @@ Cg
                         <viewLayoutGuide key="safeArea" id="MuW-y5-kMA"/>
                     </view>
                     <navigationItem key="navigationItem" id="4YR-vB-OpT"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="ToF-IE-aRD" id="fBf-Al-Acr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0o-17-fKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1549,14 +1509,23 @@ Cg
                                             <constraint firstAttribute="height" constant="125" id="oSs-lP-dUh"/>
                                         </constraints>
                                         <state key="normal" image="Male"/>
+                                        <connections>
+                                            <action selector="maleGenderButtonAction:" destination="r52-Pk-sHH" eventType="touchUpInside" id="fX5-6A-yC6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOs-rK-bhk">
                                         <rect key="frame" x="168" y="3" width="175" height="125"/>
                                         <state key="normal" image="Female"/>
+                                        <connections>
+                                            <action selector="femaleGenderButtonAction:" destination="r52-Pk-sHH" eventType="touchUpInside" id="WVk-lf-Znq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wr-Cp-Va9">
                                         <rect key="frame" x="0.0" y="147" width="175" height="125"/>
                                         <state key="normal" image="others"/>
+                                        <connections>
+                                            <action selector="othersGenderButtonAction:" destination="r52-Pk-sHH" eventType="touchUpInside" id="3fx-9G-EA9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1607,6 +1576,11 @@ Cg
                         <viewLayoutGuide key="safeArea" id="H7g-95-9f1"/>
                     </view>
                     <navigationItem key="navigationItem" id="2S0-2s-t3M"/>
+                    <connections>
+                        <outlet property="femaleGenderButton" destination="aOs-rK-bhk" id="k8A-ud-lEb"/>
+                        <outlet property="maleGenderButton" destination="BHt-T3-lgz" id="dwp-G7-b1N"/>
+                        <outlet property="othersGenderButton" destination="0wr-Cp-Va9" id="FX5-u1-0XO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xA5-BT-AaV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1978,14 +1952,23 @@ Live in or visit a place where COVID-19 is spreading
                                             <constraint firstAttribute="height" constant="125" id="owv-xi-2Ay"/>
                                         </constraints>
                                         <state key="normal" image="Yes"/>
+                                        <connections>
+                                            <action selector="yesTwoWeeksHistoryButtonAction:" destination="Z2O-sT-R0K" eventType="touchUpInside" id="FVQ-eO-o2I"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-ZI-MHa">
                                         <rect key="frame" x="168" y="3" width="175" height="125"/>
                                         <state key="normal" image="No"/>
+                                        <connections>
+                                            <action selector="noTwoWeeksHistoryButtonAction:" destination="Z2O-sT-R0K" eventType="touchUpInside" id="88t-9v-lyz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opB-65-HrA">
                                         <rect key="frame" x="0.0" y="147" width="175" height="125"/>
                                         <state key="normal" image="Maybe"/>
+                                        <connections>
+                                            <action selector="maybeTwoWeeksHistoryButtonAction:" destination="Z2O-sT-R0K" eventType="touchUpInside" id="LXd-c0-y6r"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPa-ye-6kw">
                                         <rect key="frame" x="215.5" y="169" width="80" height="81"/>
@@ -2026,6 +2009,11 @@ Live in or visit a place where COVID-19 is spreading
                         <viewLayoutGuide key="safeArea" id="WsD-qE-hXZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="NVY-gz-2Vs"/>
+                    <connections>
+                        <outlet property="maybeTwoWeeksHistoryButton" destination="opB-65-HrA" id="ZfE-jX-eyO"/>
+                        <outlet property="noTwoWeeksHistoryButton" destination="qsX-ZI-MHa" id="b7X-Kr-jXT"/>
+                        <outlet property="yesTwoWeeksHistoryButton" destination="Tdl-gL-6lH" id="VBH-dz-gWF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdi-hI-bFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2424,6 +2412,7 @@ Please avoid public gatherings and learn more from the app. Talk to you soon!</s
         <image name="Maybe" width="175" height="125"/>
         <image name="Nav" width="80" height="81"/>
         <image name="No" width="175" height="125"/>
+        <image name="Notice" width="28" height="28"/>
         <image name="PreventionPrevention" width="341" height="115"/>
         <image name="Rectangle 3" width="24" height="24"/>
         <image name="Support" width="341" height="115"/>
@@ -2432,14 +2421,12 @@ Please avoid public gatherings and learn more from the app. Talk to you soon!</s
         <image name="checkmark.seal" catalog="system" width="128" height="122"/>
         <image name="covid-19" width="207" height="149"/>
         <image name="covidTestRequest" width="341" height="115"/>
-        <image name="doc.plaintext" catalog="system" width="115" height="128"/>
         <image name="emergencyCall" width="175" height="125"/>
         <image name="family" width="175" height="125"/>
         <image name="familySenior" width="175" height="125"/>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="importantNumber" width="341" height="115"/>
-        <image name="notice" width="28" height="28"/>
         <image name="others" width="175" height="125"/>
         <image name="profile_pic" width="256" height="256"/>
         <image name="self" width="175" height="125"/>

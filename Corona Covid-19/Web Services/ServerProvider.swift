@@ -23,7 +23,10 @@ enum CoronaVirus {
 extension CoronaVirus: TargetType {
     /// The target's base `URL`.
     var baseURL: URL {
-        return URL(string: "https://coronavirus-monitor.p.rapidapi.com/coronavirus")!
+        guard let url = URL(string: "https://coronavirus-monitor.p.rapidapi.com/coronavirus") else {
+            fatalError("Couldn't load BaseURL")
+        }
+        return url
     }
     var path: String {
         

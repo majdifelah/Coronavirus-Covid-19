@@ -18,6 +18,15 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var countriesTextField: UITextField!
     @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var confirmedCases: UILabel!
+    @IBOutlet weak var deaths: UILabel!
+    @IBOutlet weak var recovered: UILabel!
+    @IBOutlet weak var newCases: UILabel!
+    @IBOutlet weak var activeCases: UILabel!
+    @IBOutlet weak var newDeaths: UILabel!
+    @IBOutlet weak var seriousCritical: UILabel!
+    
+    var countryCovidStat: LatestStatByCountry?
     
     enum CardState {
         case expanded
@@ -35,10 +44,9 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     var runningAnimations = [UIViewPropertyAnimator]()
     var animationProgressWhenInterrupted:CGFloat = 0
     
-    private var searchListVM: SearchListViewModel!
+    private var searchVM: SearchViewModel!
     let provider = MoyaProvider<CoronaVirus>()
     let decoder = JSONDecoder()
-    var countryCovidStat: [LatestStatByCountry] = []
     var countriesAffected: [String] = []
     var selectedCountry: String?
     var numberOfTypeOfCases = [PieChartDataEntry]()
@@ -72,16 +80,25 @@ class SearchViewController: UIViewController, ChartViewDelegate {
                 do {
                     
                     let result = try self.decoder.decode(CountryLiveStats.self, from: data)
-                    self.countryCovidStat = result.latestStatByCountry
-                    self.searchListVM = SearchListViewModel(countryCovidStats: self.countryCovidStat)
+                    guard let countryCovidStat =  result.latestStatByCountry.first else {return}
+                    self.countryCovidStat = countryCovidStat
+                    self.searchVM = SearchViewModel(countryCovidStat)
                     self.setupChart()
                     
                     DispatchQueue.main.async {
-                        self.tableView.reloadData()
+                        DispatchQueue.main.async {
+                            self.confirmedCases.text = "Total Cases: \(self.searchVM.totalCases)"
+                            self.deaths.text = "Deaths: \(self.searchVM.totalDeaths)"
+                            self.recovered.text = "Recovered: \(self.searchVM.totalRecovered)"
+                            self.newCases.text = "\(self.searchVM.newCases)"
+                            self.activeCases.text = "\(self.searchVM.activeCases)"
+                            self.newDeaths.text = "\(self.searchVM.newDeaths)"
+                            self.seriousCritical.text = "\(self.searchVM.seriousCritical)"
+                        }
                         self.setupChart()
-                       
+                        
                     }
-                     hud.hide(animated: true)
+                    hud.hide(animated: true)
                 } catch {
                     
                     fatalError("fatal error while getting world Stats")
@@ -114,22 +131,22 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     
 }
 //MARK: Table View Data Source:
-extension SearchViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.searchListVM == nil ? 0 : self.searchListVM.numberOfRowsInSection(section)
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "searchID", for: indexPath) as? SearchTableViewCell else {
-            fatalError("ArticleTableViewCell not found")
-        }
-        
-        let searchVM = self.searchListVM.searchStatAtIndex(indexPath.row)
-        cell.configureCell(countryCovidStat: searchVM)
-        return cell
-    }
-}
+//extension SearchViewController: UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return self.searchListVM == nil ? 0 : self.searchListVM.numberOfRowsInSection(section)
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "searchID", for: indexPath) as? SearchTableViewCell else {
+//            fatalError("ArticleTableViewCell not found")
+//        }
+//
+//        let searchVM = self.searchListVM.searchStatAtIndex(indexPath.row)
+//        cell.configureCell(countryCovidStat: searchVM)
+//        return cell
+//    }
+//}
 
 // MARK: - Search Bar Delegate
 extension SearchViewController: UISearchBarDelegate {
@@ -199,9 +216,9 @@ extension SearchViewController: UIPickerViewDataSource,UIPickerViewDelegate {
 extension SearchViewController {
     func setupChart() {
         
-        let doubleTotalCases = Double(self.countryCovidStat[0].totalCases.replacingOccurrences(of: ",", with: "")) ?? 0.0
-        let doubleTotalDeaths = Double(self.countryCovidStat[0].totalDeaths.replacingOccurrences(of: ",", with: "")) ?? 0.0
-        let doubleTotalRecovered = Double(self.countryCovidStat[0].totalRecovered.replacingOccurrences(of: ",", with: "")) ?? 0.0
+        let doubleTotalCases = Double(self.countryCovidStat!.totalCases.replacingOccurrences(of: ",", with: "")) ?? 0.0
+        let doubleTotalDeaths = Double(self.countryCovidStat!.totalDeaths.replacingOccurrences(of: ",", with: "")) ?? 0.0
+        let doubleTotalRecovered = Double(self.countryCovidStat!.totalRecovered.replacingOccurrences(of: ",", with: "")) ?? 0.0
         pieChartView.chartDescription?.text = "Covid-19 Chart"
         
         let totalCasesDataEntry = PieChartDataEntry(value: 0)
