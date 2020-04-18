@@ -34,6 +34,7 @@
 		9A40B7C7243CC3E00067F0AB /* AllCasesByCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7C6243CC3E00067F0AB /* AllCasesByCountry.swift */; };
 		9A40B7C9243CD7370067F0AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7C8243CD7360067F0AB /* HomeViewController.swift */; };
 		9A40B7CB243CD85B0067F0AB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40B7CA243CD85B0067F0AB /* HomeViewModel.swift */; };
+		9A5F7CDD244B41D800F8A76F /* Covid-19.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F7CDC244B41D800F8A76F /* Covid-19.storyboard */; };
 		9A70BCA0244148D300E7DBD3 /* LiveCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70BC9F244148D300E7DBD3 /* LiveCheckViewController.swift */; };
 		9A70BCA2244148F900E7DBD3 /* TestBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70BCA1244148F900E7DBD3 /* TestBookingViewController.swift */; };
 		9A70BCA52441D31D00E7DBD3 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70BCA42441D31D00E7DBD3 /* IntroductionViewController.swift */; };
@@ -97,6 +98,7 @@
 		9A40B7C6243CC3E00067F0AB /* AllCasesByCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCasesByCountry.swift; sourceTree = "<group>"; };
 		9A40B7C8243CD7360067F0AB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9A40B7CA243CD85B0067F0AB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9A5F7CDC244B41D800F8A76F /* Covid-19.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Covid-19.storyboard"; sourceTree = "<group>"; };
 		9A70BC9F244148D300E7DBD3 /* LiveCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCheckViewController.swift; sourceTree = "<group>"; };
 		9A70BCA1244148F900E7DBD3 /* TestBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBookingViewController.swift; sourceTree = "<group>"; };
 		9A70BCA42441D31D00E7DBD3 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				483932E3243F243B002D1680 /* LaunchScreen.storyboard */,
 				483932E5243F249C002D1680 /* Main.storyboard */,
 				9A32DF49243DD44900D03BCE /* MainCard.xib */,
+				9A5F7CDC244B41D800F8A76F /* Covid-19.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				9A32DF4A243DD44900D03BCE /* MainCard.xib in Resources */,
 				483932E6243F249C002D1680 /* Main.storyboard in Resources */,
 				9A33A690243228F8001BD8E3 /* Assets.xcassets in Resources */,
+				9A5F7CDD244B41D800F8A76F /* Covid-19.storyboard in Resources */,
 				483932E4243F243B002D1680 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

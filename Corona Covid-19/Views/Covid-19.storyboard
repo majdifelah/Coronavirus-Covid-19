@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ux0-Z3-udZ">
+            <objects>
+                <viewController id="L2D-Nc-zSi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="13B-ya-Qee">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oul-XS-hVE" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="327" width="414" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-tX-3Jk">
+                                <rect key="frame" x="174" y="44" width="240" height="221"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0dd-Jh-qeE">
+                                <rect key="frame" x="0.0" y="539" width="414" height="357"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYr-Uv-bK1">
+                                        <rect key="frame" x="8" y="8" width="185" height="101"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ct8-Ko-ok3">
+                                        <rect key="frame" x="221" y="8" width="185" height="101"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKd-ZG-Vtp">
+                                        <rect key="frame" x="8" y="133" width="184" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-Pb-bra">
+                                        <rect key="frame" x="221" y="133" width="185" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zK7-hW-eN3">
+                                        <rect key="frame" x="7" y="240" width="185" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dvr-JS-pot">
+                                        <rect key="frame" x="221" y="240" width="185" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.96470588235294119" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="auI-cR-g5I"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vFQ-BD-wiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3823.188405797102" y="-208.25892857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eA5-RR-DAI">
+            <objects>
+                <viewController id="RcB-Tg-uPE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lj5-xQ-YLC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Hbo-X3-Zx8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0PY-Oy-jmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2836" y="-208"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iuU-cv-Qtd">
+            <objects>
+                <viewController id="LvZ-uN-05S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NjE-z0-F82">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hmX-Sg-lwH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyv-YD-Lsl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="-208"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PZz-An-n4Z">
+            <objects>
+                <viewController id="Xi5-nG-eG0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rzd-PS-seH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5ZX-b4-rbm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4S-HP-Zua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2291" y="-208"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qA6-4q-vre">
+            <objects>
+                <viewController id="IVs-PS-BQY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NFY-m5-7wz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coronaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="mTN-xf-KW1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID 19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMK-1k-Cnb">
+                                <rect key="frame" x="147" y="507" width="120" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mTN-xf-KW1" secondAttribute="bottom" id="5Cq-dR-Uny"/>
+                            <constraint firstItem="mTN-xf-KW1" firstAttribute="top" secondItem="NFY-m5-7wz" secondAttribute="top" id="Ksi-9K-kF5"/>
+                            <constraint firstItem="rMK-1k-Cnb" firstAttribute="top" secondItem="UpD-As-jsN" secondAttribute="top" constant="463" id="MIL-j6-1W1"/>
+                            <constraint firstItem="UpD-As-jsN" firstAttribute="bottom" secondItem="rMK-1k-Cnb" secondAttribute="bottom" constant="334" id="TQv-x0-7Mm"/>
+                            <constraint firstItem="rMK-1k-Cnb" firstAttribute="centerX" secondItem="NFY-m5-7wz" secondAttribute="centerX" id="WCg-XO-SeK"/>
+                            <constraint firstItem="mTN-xf-KW1" firstAttribute="leading" secondItem="UpD-As-jsN" secondAttribute="leading" id="aac-aa-lTP"/>
+                            <constraint firstItem="mTN-xf-KW1" firstAttribute="trailing" secondItem="UpD-As-jsN" secondAttribute="trailing" id="mIg-wR-jtn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UpD-As-jsN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARe-of-Sou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4830.434782608696" y="-208.25892857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NNB-vN-f6Y">
+            <objects>
+                <viewController id="9TL-NV-2e8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qbe-VT-YWn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qvP-Y8-QK4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JR4-EM-QMz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="-208"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aeY-co-ezp">
+            <objects>
+                <viewController id="s1t-s8-5jz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XZY-FL-k4l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RGw-BD-ZYB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X2Y-Il-QAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-817" y="-208"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="17y-Jt-pBN">
+            <objects>
+                <viewController id="dx1-tP-vWA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="min-Sz-Ncp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="sM0-cB-KSn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8k-qX-Le7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1828" y="-208"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coronaLogo" width="125" height="271"/>
+    </resources>
+</document>
