@@ -39,5 +39,18 @@ extension HomeViewModel {
     var newDeaths: String {
         return "\(self.worldStats.newDeaths)"
     }
+    
+    var fatalityRate: String {
+        let doubleTotalCases = Double(self.worldStats.totalCases.replacingOccurrences(of: ",", with: "")) ?? 0.0
+        let doubleTotalDeaths = Double(self.worldStats.totalDeaths.replacingOccurrences(of: ",", with: "")) ?? 0.0
+        
+        let fatality = (doubleTotalDeaths * 100) / doubleTotalCases
+        
+        return "\(fatality.rounded())%"
+    }
+}
+extension HomeViewModel {
+
+    
 }
 

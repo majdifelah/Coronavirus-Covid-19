@@ -18,7 +18,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var newCasesLabel: UILabel!
     @IBOutlet weak var newDeathsCases: UILabel!
     @IBOutlet weak var checkByCountryButton: UIButton!
+    @IBOutlet weak var fatalityRateLabel: UILabel!
     
+    @IBOutlet weak var totalCasesView: UIView!
+    @IBOutlet weak var totalDeathView: UIView!
+    @IBOutlet weak var newDeathsView: UIView!
+    @IBOutlet weak var newCasesView: UIView!
+    @IBOutlet weak var recoveredView: UIView!
+    @IBOutlet weak var fatalityRteView: UIView!
     @IBOutlet weak var currentTimeLabel: UILabel!
     
     var timer = Timer()
@@ -28,9 +35,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkByCountryButton.layer.cornerRadius = 15.0
+        totalCasesView.layer.cornerRadius = 15.0
+        totalDeathView.layer.cornerRadius = 15.0
+        newDeathsView.layer.cornerRadius = 15.0
+        newCasesView.layer.cornerRadius = 15.0
+        fatalityRteView.layer.cornerRadius = 15.0
+        recoveredView.layer.cornerRadius = 15.0
         view.backgroundColor = UIColor(rgb: 0x3C3B3B)
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
+
+        
     }
     
     @objc func tick() {
@@ -42,7 +55,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.getWorldStats()
-        self.tick()
+       // self.tick()
         
     }
     
@@ -62,11 +75,12 @@ class HomeViewController: UIViewController {
                     let result = try decoder.decode(WorldStats.self, from: data)
                     self.homeListVM = HomeViewModel(result)
                     DispatchQueue.main.async {
-                        self.totalCasesLabel.text = "Total Cases: \(self.homeListVM.totalCases)"
-                        self.totalDeathsLabel.text = "Deaths: \(self.homeListVM.totalDeaths)"
-                        self.totalRecoveredLabel.text = "Recovered: \(self.homeListVM.totalRecovered)"
-                        self.newCasesLabel.text = "\(self.homeListVM.newCases)"
-                        self.newDeathsCases.text = "\(self.homeListVM.newDeaths)"
+                        self.totalCasesLabel.text = self.homeListVM.totalCases
+               //         self.totalDeathsLabel.text = self.homeListVM.totalDeaths
+                         self.totalRecoveredLabel.text = self.homeListVM.totalRecovered
+                        self.newCasesLabel.text = self.homeListVM.newCases
+                        self.newDeathsCases.text = self.homeListVM.newDeaths
+                        self.fatalityRateLabel.text = self.homeListVM.fatalityRate
                         
                     }
                     hud.hide(animated: true)
