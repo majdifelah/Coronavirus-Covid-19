@@ -26,3 +26,17 @@ extension UIColor {
         )
     }
 }
+
+//extension UIPageControl {
+//    
+//    func configurePageControl(numberOfPages: Int, view: UIViewController) {
+//        
+//        pageControl = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY -  50, width: UIScreen.main.bounds.width, height: 50))
+//        pageControl.numberOfPages = numberOfPages
+//        pageControl.currentPage = 0
+//        pageControl.tintColor = .black
+//        pageControl.pageIndicatorTintColor = .black
+//        self.view.addSubview(pageControl)
+//    }
+//    
+//}

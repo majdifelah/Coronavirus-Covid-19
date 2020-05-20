@@ -22,12 +22,16 @@ class IntroductionViewController: UIViewController {
     }
     
     @IBAction func welcomeButtonAction(_ sender: Any) {
-        let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        UserDefaults.standard.set(true, forKey: "TutorialScreenShowed")
         
+        //Set user defaults
+        UserDefaults.standard.set(true, forKey: "onBoarding")
+        
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+          let sceneDelegate = windowScene.delegate as? SceneDelegate
+        else {
+          return
+        }
         sceneDelegate.applicationLaunching(withVC: 0)
-//        let homeVC = main.instantiateViewController(withIdentifier: "liveCasesVC")
-//        sceneDelegate.window?.rootViewController = UINavigationController(rootViewController: homeVC)
+        
     }
 }

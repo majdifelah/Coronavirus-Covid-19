@@ -9,6 +9,7 @@
 import UIKit
 import Moya
 import MBProgressHUD
+import Charts
 
 class HomeViewController: UIViewController {
     
@@ -19,7 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var newDeathsCases: UILabel!
     @IBOutlet weak var checkByCountryButton: UIButton!
     @IBOutlet weak var fatalityRateLabel: UILabel!
-    
+    @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var totalCasesView: UIView!
     @IBOutlet weak var totalDeathView: UIView!
     @IBOutlet weak var newDeathsView: UIView!
@@ -30,7 +31,7 @@ class HomeViewController: UIViewController {
     
     var timer = Timer()
     private var homeListVM: HomeViewModel!
-    
+    var numberOfTypeOfCases = [PieChartDataEntry]()
     let provider = MoyaProvider<CoronaVirus>()
     
     override func viewDidLoad() {
@@ -41,8 +42,9 @@ class HomeViewController: UIViewController {
         newCasesView.layer.cornerRadius = 15.0
         fatalityRteView.layer.cornerRadius = 15.0
         recoveredView.layer.cornerRadius = 15.0
-        view.backgroundColor = UIColor(rgb: 0x3C3B3B)
-
+        self.checkByCountryButton.layer.cornerRadius = 15
+       // view.backgroundColor = UIColor(rgb: 0x3C3B3B)
+        
         
     }
     
@@ -55,7 +57,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.getWorldStats()
-       // self.tick()
+        // self.tick()
         
     }
     
@@ -76,12 +78,12 @@ class HomeViewController: UIViewController {
                     self.homeListVM = HomeViewModel(result)
                     DispatchQueue.main.async {
                         self.totalCasesLabel.text = self.homeListVM.totalCases
-               //         self.totalDeathsLabel.text = self.homeListVM.totalDeaths
-                         self.totalRecoveredLabel.text = self.homeListVM.totalRecovered
+                        self.totalDeathsLabel.text = self.homeListVM.totalDeaths
+                        self.totalRecoveredLabel.text = self.homeListVM.totalRecovered
                         self.newCasesLabel.text = self.homeListVM.newCases
                         self.newDeathsCases.text = self.homeListVM.newDeaths
                         self.fatalityRateLabel.text = self.homeListVM.fatalityRate
-                        
+                        self.setupChart()
                     }
                     hud.hide(animated: true)
                 } catch {
@@ -95,4 +97,39 @@ class HomeViewController: UIViewController {
         }
     }
     
+}
+
+extension HomeViewController {
+    
+    func setupChart() {
+           
+           let doubleTotalCases = Double(self.homeListVM!.totalCases.replacingOccurrences(of: ",", with: "")) ?? 0.0
+           let doubleTotalDeaths = Double(self.homeListVM!.totalDeaths.replacingOccurrences(of: ",", with: "")) ?? 0.0
+           let doubleTotalRecovered = Double(self.homeListVM!.totalRecovered.replacingOccurrences(of: ",", with: "")) ?? 0.0
+           pieChartView.chartDescription?.text = "Covid-19 Chart"
+           
+           let totalCasesDataEntry = PieChartDataEntry(value: 0)
+           let deathDataEntry = PieChartDataEntry(value: 0)
+           let recoveredDataEntry = PieChartDataEntry(value: 0)
+           
+           
+           totalCasesDataEntry.value = doubleTotalCases
+           totalCasesDataEntry.label = "Confirmed"
+           deathDataEntry.value = doubleTotalDeaths
+           deathDataEntry.label = "Deaths"
+           recoveredDataEntry.value = doubleTotalRecovered
+           recoveredDataEntry.label = "Recovered"
+           numberOfTypeOfCases = [totalCasesDataEntry, deathDataEntry, recoveredDataEntry]
+           
+           updateChartData()
+       }
+       func updateChartData() {
+           let chartDataSet = PieChartDataSet(entries: numberOfTypeOfCases, label: nil)
+           let chartData = PieChartData(dataSet: chartDataSet)
+           
+           let colors = [UIColor(rgb: 0xF6C667), UIColor(rgb: 0xFF7A8A), UIColor(rgb: 0x2A9D8F)]
+           chartDataSet.colors = colors
+           
+           pieChartView.data = chartData
+       }
 }

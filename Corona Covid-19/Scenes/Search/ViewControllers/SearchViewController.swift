@@ -15,7 +15,6 @@ import Charts
 class SearchViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var countrySearchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var countriesTextField: UITextField!
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var confirmedCases: UILabel!
@@ -53,7 +52,6 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     
     @IBAction func reloadButtonAction(_ sender: Any) {
         guard let countryToCheck = self.selectedCountry else {return}
-        
         searchForCovidInCountry(countryToCheck)
     }
     override func viewDidLoad() {
@@ -70,7 +68,7 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     func searchForCovidInCountry(_ country: String) {
         
         self.provider.request(.latestStatByCountry(country: country)) {[weak self] result in
-            //memory management
+            
             guard let self = self else { return }
             
             switch result {
@@ -83,20 +81,18 @@ class SearchViewController: UIViewController, ChartViewDelegate {
                     guard let countryCovidStat =  result.latestStatByCountry.first else {return}
                     self.countryCovidStat = countryCovidStat
                     self.searchVM = SearchViewModel(countryCovidStat)
+                    
                     self.setupChart()
                     
                     DispatchQueue.main.async {
-                        DispatchQueue.main.async {
-                            self.confirmedCases.text = "Total Cases: \(self.searchVM.totalCases)"
-                            self.deaths.text = "Deaths: \(self.searchVM.totalDeaths)"
-                            self.recovered.text = "Recovered: \(self.searchVM.totalRecovered)"
-                            self.newCases.text = "\(self.searchVM.newCases)"
-                            self.activeCases.text = "\(self.searchVM.activeCases)"
-                            self.newDeaths.text = "\(self.searchVM.newDeaths)"
-                            self.seriousCritical.text = "\(self.searchVM.seriousCritical)"
-                        }
+                        self.confirmedCases.text = "\(self.searchVM.totalCases)"
+                        self.deaths.text = "\(self.searchVM.totalDeaths)"
+                        self.recovered.text = "\(self.searchVM.totalRecovered)"
+                        self.newCases.text = "\(self.searchVM.newCases)"
+                        self.activeCases.text = "\(self.searchVM.activeCases)"
+                        self.newDeaths.text = "\(self.searchVM.newDeaths)"
+                        //self.seriousCritical.text = "\(self.searchVM.seriousCritical)"
                         self.setupChart()
-                        
                     }
                     hud.hide(animated: true)
                 } catch {
@@ -130,23 +126,6 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     }
     
 }
-//MARK: Table View Data Source:
-//extension SearchViewController: UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.searchListVM == nil ? 0 : self.searchListVM.numberOfRowsInSection(section)
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "searchID", for: indexPath) as? SearchTableViewCell else {
-//            fatalError("ArticleTableViewCell not found")
-//        }
-//
-//        let searchVM = self.searchListVM.searchStatAtIndex(indexPath.row)
-//        cell.configureCell(countryCovidStat: searchVM)
-//        return cell
-//    }
-//}
 
 // MARK: - Search Bar Delegate
 extension SearchViewController: UISearchBarDelegate {
@@ -212,7 +191,7 @@ extension SearchViewController: UIPickerViewDataSource,UIPickerViewDelegate {
     }
 }
 
-//MARK: Chart View
+//MARK: - Chart View
 extension SearchViewController {
     func setupChart() {
         
@@ -247,7 +226,7 @@ extension SearchViewController {
     }
 }
 
-//Mark: Creation of menu view
+//MARK: - Creation of menu view
 extension SearchViewController {
     
     func setupCard() {
