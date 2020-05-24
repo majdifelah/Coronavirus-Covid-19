@@ -11,8 +11,11 @@ import UIKit
 class PageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVC(viewController:"screenOne"),
-        self.newVC(viewController:"screenTwo")
+        return [
+            self.newVC(viewController:"adviceOne"),
+            self.newVC(viewController:"adviceTwo"),
+            self.newVC(viewController:"adviceThree"),
+            self.newVC(viewController:"screenOne")
         ]
         
     }()
@@ -26,14 +29,14 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         
         if let onBoarding = UserDefaults.standard.object(forKey: "onBoarding") as? Bool, onBoarding {
             // MARK: - Go to TabBar
-        
+            
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let sceneDelegate = windowScene.delegate as? SceneDelegate
-            else {
-              return
+                let sceneDelegate = windowScene.delegate as? SceneDelegate
+                else {
+                    return
             }
             sceneDelegate.applicationLaunching(withVC: 0)
-
+            
         } else {
             if let firstViewController = orderedViewControllers.first {
                 setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
@@ -51,20 +54,21 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {return nil}
         let previousIndex = viewControllerIndex - 1
-        guard previousIndex >= 0 else {return nil}
+        guard previousIndex >= 0 else {return orderedViewControllers.last}
         guard orderedViewControllers.count > previousIndex else { return nil}
         
         return orderedViewControllers[previousIndex]
-       }
-       
-       func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-           guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {return nil}
-           let nextIndex = viewControllerIndex + 1
-           guard nextIndex >= 0 else {return nil}
-           guard orderedViewControllers.count > nextIndex else { return nil}
-           
-           return orderedViewControllers[nextIndex]
-       }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {return nil}
+        let nextIndex = viewControllerIndex + 1
+        guard nextIndex >= 0 else {return nil}
+        guard orderedViewControllers.count > nextIndex else { return nil}
+        guard orderedViewControllers.count != nextIndex else {return orderedViewControllers.first}
+        
+        return orderedViewControllers[nextIndex]
+    }
 }
 
 extension PageViewController {

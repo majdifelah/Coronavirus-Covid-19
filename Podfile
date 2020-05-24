@@ -10,6 +10,7 @@ target 'Corona Covid-19' do
   pod 'ReachabilitySwift'
   pod 'MBProgressHUD'
   pod 'Charts'
+  pod 'FittedSheets'
   
   target 'Corona Covid-19Tests' do
     inherit! :search_paths

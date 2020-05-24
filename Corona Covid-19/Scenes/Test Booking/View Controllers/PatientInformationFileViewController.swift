@@ -37,7 +37,8 @@ class PatientInformationFileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TODO:
+        //TODO: - 
+        
     }
     
     func checkButtonState(button: UIButton, state: Bool, imageChecked: String, imageUnchecked: String) {

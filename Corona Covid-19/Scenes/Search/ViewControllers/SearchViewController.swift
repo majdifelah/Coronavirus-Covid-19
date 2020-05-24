@@ -11,6 +11,7 @@ import Foundation
 import Moya
 import MBProgressHUD
 import Charts
+import FittedSheets
 
 class SearchViewController: UIViewController, ChartViewDelegate {
     
@@ -23,26 +24,16 @@ class SearchViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var newCases: UILabel!
     @IBOutlet weak var activeCases: UILabel!
     @IBOutlet weak var newDeaths: UILabel!
-    @IBOutlet weak var seriousCritical: UILabel!
+    //@IBOutlet weak var seriousCritical: UILabel!
+    @IBOutlet weak var confirmedCasesView: UIView!
+    @IBOutlet weak var deathsView: UIView!
+    @IBOutlet weak var recoveredView: UIView!
+    @IBOutlet weak var newCasesView: UIView!
+    @IBOutlet weak var activeCasesView: UIView!
+    @IBOutlet weak var newDeathsView: UIView!
     
     var countryCovidStat: LatestStatByCountry?
-    
-    enum CardState {
-        case expanded
-        case collapsed
-    }
-    
-    var menuViewController: MenuViewController!
-    var visualEffectView:UIVisualEffectView!
-    let cardHeight:CGFloat = 600
-    let cardHandleAreaHeight:CGFloat = 65
-    var cardVisible = false
-    var nextState:CardState {
-        return cardVisible ? .collapsed : .expanded
-    }
-    var runningAnimations = [UIViewPropertyAnimator]()
-    var animationProgressWhenInterrupted:CGFloat = 0
-    
+
     private var searchVM: SearchViewModel!
     let provider = MoyaProvider<CoronaVirus>()
     let decoder = JSONDecoder()
@@ -54,10 +45,19 @@ class SearchViewController: UIViewController, ChartViewDelegate {
         guard let countryToCheck = self.selectedCountry else {return}
         searchForCovidInCountry(countryToCheck)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupCard()
+        
+        self.confirmedCasesView.layer.cornerRadius = 15
+        self.newCasesView.layer.cornerRadius = 15
+        self.deathsView.layer.cornerRadius = 15
+        self.newDeathsView.layer.cornerRadius = 15
+        self.recoveredView.layer.cornerRadius = 15
+        self.activeCasesView.layer.cornerRadius = 15
+        
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getAffectedCountries()
@@ -124,7 +124,6 @@ class SearchViewController: UIViewController, ChartViewDelegate {
             }
         }
     }
-    
 }
 
 // MARK: - Search Bar Delegate
@@ -166,11 +165,11 @@ extension SearchViewController {
         view.endEditing(true)
         
     }
-    
 }
 
 //MARK: Picker View Data Source and Delegate
 extension SearchViewController: UIPickerViewDataSource,UIPickerViewDelegate {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
@@ -193,6 +192,7 @@ extension SearchViewController: UIPickerViewDataSource,UIPickerViewDelegate {
 
 //MARK: - Chart View
 extension SearchViewController {
+    
     func setupChart() {
         
         let doubleTotalCases = Double(self.countryCovidStat!.totalCases.replacingOccurrences(of: ",", with: "")) ?? 0.0
@@ -215,6 +215,7 @@ extension SearchViewController {
         
         updateChartData()
     }
+    
     func updateChartData() {
         let chartDataSet = PieChartDataSet(entries: numberOfTypeOfCases, label: nil)
         let chartData = PieChartData(dataSet: chartDataSet)
@@ -225,124 +226,3 @@ extension SearchViewController {
         pieChartView.data = chartData
     }
 }
-
-//MARK: - Creation of menu view
-extension SearchViewController {
-    
-    func setupCard() {
-        visualEffectView = UIVisualEffectView()
-        visualEffectView.frame = self.view.frame
-        self.view.addSubview(visualEffectView)
-        
-        menuViewController = MenuViewController(nibName:"MainCard", bundle:nil)
-        self.addChild(menuViewController)
-        self.view.addSubview(menuViewController.view)
-        
-        menuViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
-        
-        menuViewController.view.clipsToBounds = true
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SearchViewController.handleCardTap(recognzier:)))
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SearchViewController.handleCardPan(recognizer:)))
-        
-        menuViewController.handleArea.addGestureRecognizer(tapGestureRecognizer)
-        menuViewController.handleArea.addGestureRecognizer(panGestureRecognizer)
-    }
-    
-    @objc
-    func handleCardTap(recognzier:UITapGestureRecognizer) {
-        switch recognzier.state {
-        case .ended:
-            animateTransitionIfNeeded(state: nextState, duration: 0.9)
-        default:
-            break
-        }
-    }
-    
-    @objc
-    func handleCardPan (recognizer:UIPanGestureRecognizer) {
-        switch recognizer.state {
-        case .began:
-            startInteractiveTransition(state: nextState, duration: 0.9)
-        case .changed:
-            let translation = recognizer.translation(in: self.menuViewController.handleArea)
-            var fractionComplete = translation.y / cardHeight
-            fractionComplete = cardVisible ? fractionComplete : -fractionComplete
-            updateInteractiveTransition(fractionCompleted: fractionComplete)
-        case .ended:
-            continueInteractiveTransition()
-        default:
-            break
-        }
-    }
-    
-    func animateTransitionIfNeeded (state:CardState, duration:TimeInterval) {
-        if runningAnimations.isEmpty {
-            let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
-                switch state {
-                case .expanded:
-                    self.menuViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
-                case .collapsed:
-                    self.menuViewController.view.frame.origin.y = self.view.frame.height - self.cardHandleAreaHeight
-                }
-            }
-            
-            frameAnimator.addCompletion { _ in
-                self.cardVisible = !self.cardVisible
-                self.runningAnimations.removeAll()
-            }
-            
-            frameAnimator.startAnimation()
-            runningAnimations.append(frameAnimator)
-            
-            
-            let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
-                switch state {
-                case .expanded:
-                    self.menuViewController.view.layer.cornerRadius = 12
-                case .collapsed:
-                    self.menuViewController.view.layer.cornerRadius = 0
-                }
-            }
-            
-            cornerRadiusAnimator.startAnimation()
-            runningAnimations.append(cornerRadiusAnimator)
-            
-            let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
-                switch state {
-                case .expanded:
-                    self.visualEffectView.effect = UIBlurEffect(style: .dark)
-                case .collapsed:
-                    self.visualEffectView.effect = nil
-                }
-            }
-            
-            blurAnimator.startAnimation()
-            runningAnimations.append(blurAnimator)
-            
-        }
-    }
-    
-    func startInteractiveTransition(state:CardState, duration:TimeInterval) {
-        if runningAnimations.isEmpty {
-            animateTransitionIfNeeded(state: state, duration: duration)
-        }
-        for animator in runningAnimations {
-            animator.pauseAnimation()
-            animationProgressWhenInterrupted = animator.fractionComplete
-        }
-    }
-    
-    func updateInteractiveTransition(fractionCompleted:CGFloat) {
-        for animator in runningAnimations {
-            animator.fractionComplete = fractionCompleted + animationProgressWhenInterrupted
-        }
-    }
-    
-    func continueInteractiveTransition (){
-        for animator in runningAnimations {
-            animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
-        }
-    }
-}
-

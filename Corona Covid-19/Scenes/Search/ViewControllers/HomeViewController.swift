@@ -36,15 +36,13 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        totalCasesView.layer.cornerRadius = 15.0
-        totalDeathView.layer.cornerRadius = 15.0
-        newDeathsView.layer.cornerRadius = 15.0
-        newCasesView.layer.cornerRadius = 15.0
-        fatalityRteView.layer.cornerRadius = 15.0
-        recoveredView.layer.cornerRadius = 15.0
+        self.totalCasesView.layer.cornerRadius = 15.0
+        self.totalDeathView.layer.cornerRadius = 15.0
+        self.newDeathsView.layer.cornerRadius = 15.0
+        self.newCasesView.layer.cornerRadius = 15.0
+        self.fatalityRteView.layer.cornerRadius = 15.0
+        self.recoveredView.layer.cornerRadius = 15.0
         self.checkByCountryButton.layer.cornerRadius = 15
-       // view.backgroundColor = UIColor(rgb: 0x3C3B3B)
-        
         
     }
     
@@ -102,34 +100,34 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     
     func setupChart() {
-           
-           let doubleTotalCases = Double(self.homeListVM!.totalCases.replacingOccurrences(of: ",", with: "")) ?? 0.0
-           let doubleTotalDeaths = Double(self.homeListVM!.totalDeaths.replacingOccurrences(of: ",", with: "")) ?? 0.0
-           let doubleTotalRecovered = Double(self.homeListVM!.totalRecovered.replacingOccurrences(of: ",", with: "")) ?? 0.0
-           pieChartView.chartDescription?.text = "Covid-19 Chart"
-           
-           let totalCasesDataEntry = PieChartDataEntry(value: 0)
-           let deathDataEntry = PieChartDataEntry(value: 0)
-           let recoveredDataEntry = PieChartDataEntry(value: 0)
-           
-           
-           totalCasesDataEntry.value = doubleTotalCases
-           totalCasesDataEntry.label = "Confirmed"
-           deathDataEntry.value = doubleTotalDeaths
-           deathDataEntry.label = "Deaths"
-           recoveredDataEntry.value = doubleTotalRecovered
-           recoveredDataEntry.label = "Recovered"
-           numberOfTypeOfCases = [totalCasesDataEntry, deathDataEntry, recoveredDataEntry]
-           
-           updateChartData()
-       }
-       func updateChartData() {
-           let chartDataSet = PieChartDataSet(entries: numberOfTypeOfCases, label: nil)
-           let chartData = PieChartData(dataSet: chartDataSet)
-           
-           let colors = [UIColor(rgb: 0xF6C667), UIColor(rgb: 0xFF7A8A), UIColor(rgb: 0x2A9D8F)]
-           chartDataSet.colors = colors
-           
-           pieChartView.data = chartData
-       }
+        
+        let doubleTotalCases = Double(self.homeListVM!.totalCases.replacingOccurrences(of: ",", with: "")) ?? 0.0
+        let doubleTotalDeaths = Double(self.homeListVM!.totalDeaths.replacingOccurrences(of: ",", with: "")) ?? 0.0
+        let doubleTotalRecovered = Double(self.homeListVM!.totalRecovered.replacingOccurrences(of: ",", with: "")) ?? 0.0
+        pieChartView.chartDescription?.text = "Covid-19 Chart"
+        
+        let totalCasesDataEntry = PieChartDataEntry(value: 0)
+        let deathDataEntry = PieChartDataEntry(value: 0)
+        let recoveredDataEntry = PieChartDataEntry(value: 0)
+        
+        
+        totalCasesDataEntry.value = doubleTotalCases
+        totalCasesDataEntry.label = "Confirmed"
+        deathDataEntry.value = doubleTotalDeaths
+        deathDataEntry.label = "Deaths"
+        recoveredDataEntry.value = doubleTotalRecovered
+        recoveredDataEntry.label = "Recovered"
+        numberOfTypeOfCases = [totalCasesDataEntry, deathDataEntry, recoveredDataEntry]
+        
+        updateChartData()
+    }
+    func updateChartData() {
+        let chartDataSet = PieChartDataSet(entries: numberOfTypeOfCases, label: nil)
+        let chartData = PieChartData(dataSet: chartDataSet)
+        
+        let colors = [UIColor(rgb: 0xF6C667), UIColor(rgb: 0xFF7A8A), UIColor(rgb: 0x2A9D8F)]
+        chartDataSet.colors = colors
+        
+        pieChartView.data = chartData
+    }
 }
